@@ -251,6 +251,9 @@
 		<antcall target="check-env" />
 		<antcall target="clean" />
 		<antcall target="init-dir" />
+		<!--
+		<antcall target="undeploy" />
+		-->
 		<antcall target="prepare-war" />
 		<antcall target="package-war" />
 		<antcall target="deploy" />
