@@ -1,5 +1,4 @@
 target/
-extjs-ref/
 dist/
 *.bak
 .settings/
