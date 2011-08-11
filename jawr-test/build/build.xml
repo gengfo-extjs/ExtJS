@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<project name="OOCL ARP Build File for Common Tasks" default="" basedir=".">
+
+
+	<target name="load-common-properties" description="get-properties">
+		<property file="build.properties" />
+		<property environment="env" />
+
+		<path id="wls.classpath">
+			<pathelement location="${env.MW_HOME}/wlserver/server/lib/weblogic.jar" />
+			<pathelement location="${env.MW_HOME}/wlserver/server/lib/api.jar" />
+		</path>
+
+		<taskdef name="wldeploy" classname="weblogic.ant.taskdefs.management.WLDeploy" classpathref="wls.classpath" />
+	</target>
+
+	<target name="check-env" depends="load-common-properties">
+
+		<fail message="The JAVA_HOME environment variable should be set.">
+			<condition>
+				<not>
+					<available file="${env.JAVA_HOME}" />
+				</not>
+			</condition>
+		</fail>
+		<echo message="JAVA_HOME was set as: ${env.JAVA_HOME}" />
+
+		<fail message="The MW_HOME environment variable should be set.">
+			<condition>
+				<not>
+					<available file="${env.MW_HOME}" />
+				</not>
+			</condition>
+		</fail>
+		<echo message="MW_HOME was set as: ${env.MW_HOME}" />
+
+		<fail message="The ANT_HOME environment variable should be set.">
+			<condition>
+				<not>
+					<available file="${env.ANT_HOME}" />
+				</not>
+			</condition>
+		</fail>
+		<echo message="ANT_HOME was set as: ${env.ANT_HOME}" />
+
+	</target>
+
+	<target name="init-dir" depends="load-common-properties">
+
+		<mkdir dir="${root.dir}/dist" />
+		<!-- ear temp -->
+		<mkdir dir="${root.dir}/dist/temp" />
+		<mkdir dir="${root.dir}/dist/ear_temp" />
+		<mkdir dir="${root.dir}/dist/ear_temp/META-INF" />
+		<mkdir dir="${root.dir}/dist/ear_temp/${app.name}" />
+		<!-- -->
+		<mkdir dir="${root.dir}/dist/war_temp" />
+		<mkdir dir="${root.dir}/dist/war_temp/css" />
+		<mkdir dir="${root.dir}/dist/war_temp/images" />
+		<mkdir dir="${root.dir}/dist/war_temp/js" />
+		<mkdir dir="${root.dir}/dist/war_temp/WEB-INF/classes" />
+		<mkdir dir="${root.dir}/dist/war_temp/WEB-INF/lib" />
+		<mkdir dir="${root.dir}/dist/war_temp/WEB-INF/spring" />
+
+
+	</target>
+
+	<target name="prepare-ear" depends="load-common-properties">
+
+	</target>
+
+	<target name="package-ear" depends="load-common-properties">
+		<jar jarfile="${root.dir}/dist/ear_temp/${app.name}.war">
+			<zipfileset dir="D:/Gitroot.dir/ips-iris4-build-sample/gengfo_ips_iris4_build/dist/ear_temp/ear" includes="**/*.*" />
+		</jar>
+		<!--
+		<ear 
+			destfile="./dist/${wls.deploy.ear}.ear" 
+			appxml="./dist/${wls.deploy.ear}/META-INF/application.xml">
+			<fileset dir="./dist/${wls.deploy.ear}" />
+		</ear>
+		-->
+	</target>
+
+	<target name="prepare-war" depends="load-common-properties">
+
+		<antcall target="copy-war-files" />
+		
+
+
+
+	</target>
+
+	<target name="copy-war-files" depends="load-common-properties">
+		<copy todir="${root.dir}/dist/war_temp">
+			<fileset dir="${webcontent.src.root.dir}">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy-images" depends="load-common-properties">
+		<copy todir="${root.dir}/dist/war_temp/images">
+			<fileset dir="${webcontent.src.root.dir}/images">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy-js" depends="load-common-properties">
+		<copy todir="${root.dir}/dist/war_temp/js">
+			<fileset dir="${webcontent.src.root.dir}/js">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy-config-in-classes" depends="load-common-properties">
+		<copy todir="${root.dir}/dist/war_temp/WEB-INF/classes">
+			<fileset dir="${webcontent.src.root.dir}/WEB-INF/classes">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy-config-of-spring" depends="load-common-properties">
+		<copy todir="${root.dir}/dist/war_temp/WEB-INF/spring">
+			<fileset dir="${webcontent.src.root.dir}/WEB-INF/spring">
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="copy-libs" depends="load-common-properties">
+		<antcall target="select-copy-jars" />
+	</target>
+
+	<target name="copy-web.xml" depends="load-common-properties">
+		<copy file="${webcontent.src.root.dir}/WEB-INF/web.xml" tofile="${root.dir}/dist/war_temp/WEB-INF/web.xml" />
+	</target>
+
+	<target name="copy-weblogic.xml" depends="load-common-properties">
+		<copy file="${webcontent.src.root.dir}/WEB-INF/weblogic.xml" tofile="${root.dir}/dist/war_temp/WEB-INF/weblogic.xml" />
+	</target>
+
+	<target name="package-war" depends="load-common-properties">
+
+		<!--
+		<jar jarfile="${root.dir}/dist/war_temp/${app.name}.war">
+			<zipfileset dir="D:/ToDel/webapp1" includes="**/*.*"/>
+		</jar>
+		-->
+
+
+		<war destfile="${root.dir}/dist/${app.name}.war" webxml="${root.dir}/dist/war_temp/WEB-INF/web.xml">
+			<fileset dir="${root.dir}/dist/war_temp" />
+			<!--
+		 	<fileset dir="${root.dir}/dist/war_temp/js" />
+		 	<fileset dir="${root.dir}/dist/war_temp/" />
+		 	
+		 	<zipfileset dir="${root.dir}/dist/war_temp/images"/>
+		 	<lib dir="${root.dir}/dist/war_temp/WEB-INF/lib" />
+		 	<classes dir="${root.dir}/dist/war_temp/WEB-INF/classes" />
+		 	<zipfileset dir="D:/ToDel/webapp1/common" prefix="common"/>
+		 	-->
+		</war>
+
+	</target>
+
+	<!-- http://middleware123.com/weblogic/docs100/programming/wldeploy.html -->
+	<target name="deploy" depends="load-common-properties">
+		<wldeploy 
+			verbose="true" 
+			user="${weblogic.user}" 
+			password="${weblogic.password}" 
+			adminurl="${weblogic.adminurl}" 
+			source="${root.dir}/dist/${app.name}.war" 
+			action="deploy" />
+
+		<!--
+		<wldeploy 
+			verbose="true"
+			user="${weblogic.user}"
+			password="${weblogic.password}"
+			adminurl="${weblogic.adminurl}" 
+			source="D:/Gitroot.dir/ips-iris4-build-sample/gengfo_ips_iris4_build/dist/war_temp/webapp1.war"
+			action="deploy"
+		/>
+		-->
+	</target>
+
+	<target name="undeploy" depends="load-common-properties">
+		<wldeploy 
+			verbose="true" 
+			user="${weblogic.user}" 
+			password="${weblogic.password}" 
+			adminurl="${weblogic.adminurl}" 
+			name="${app.name}.war" 
+			action="undeploy" />
+	</target>
+
+	<target name="redeploy" depends="load-common-properties">
+		<wldeploy verbose="true" user="${weblogic.user}" password="${weblogic.password}" adminurl="${weblogic.adminurl}" name="${app.name}" action="redeploy" />
+	</target>
+
+	<target name="clean" depends="load-common-properties">
+		<delete dir="${root.dir}/dist" failonerror="false" />
+	</target>
+
+	<target name="sum-dependency-libs" depends="load-common-properties">
+		<echo message="pom.xml location: ${root.dir.dir}/pom.xml" />
+
+		<exec executable="mvn.bat" dir="../" failonerror="true">
+			<env key="MAVEN_TERMINATE_CMD" value="on" />
+			<arg value="clean" />
+			<arg value="install" />
+			<arg value="-PLOCAL_BUILD" />
+			<arg value="-Dmaven.test.skip=true" />
+			<arg value="-f" />
+			<arg value="${basedir}/../pom.xml" />
+		</exec>
+	</target>
+
+
+	<target name="select-copy-jars" depends="load-common-properties">
+
+
+
+	</target>
+
+
+	<target name="common-test" description="combine and test common tasks">
+		<!--
+		steps:
+			copy application.xml \
+			copy web.xml
+			copy weblogic.xml
+			build app ppp  jar
+			copy app jra
+			copy dependcy jar
+			copy css
+			copy images
+			copy js
+			copy war config in meta-inf
+			copy war config
+			copy war dependencies
+			copy spring configuration
+			copy index.jsp
+			buiild ear
+			
+		
+		-->
+		
+		
+		<antcall target="check-env" />
+		<antcall target="clean" />
+		<antcall target="init-dir" />
+		<antcall target="prepare-war" />
+		<antcall target="package-war" />
+		<antcall target="deploy" />
+		
+		<!--
+		<antcall target="undeploy" />
+		-->
+
+
+
+	</target>
+
+
+</project>
