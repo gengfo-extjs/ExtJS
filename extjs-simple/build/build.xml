@@ -163,12 +163,15 @@
 
 	</target>
 
+	<!-- http://middleware123.com/weblogic/docs100/programming/wldeploy.html -->
 	<target name="deploy" depends="load-common-properties">
-
-
-		<wldeploy verbose="true" user="${weblogic.user}" password="${weblogic.password}" adminurl="${weblogic.adminurl}" source="D:/Gitroot.dir/ips-iris4-build-sample/gengfo_ips_iris4_build/dist/ear_temp/webapp1.ear" action="deploy" />
-
-
+		<wldeploy 
+			verbose="true" 
+			user="${weblogic.user}" 
+			password="${weblogic.password}" 
+			adminurl="${weblogic.adminurl}" 
+			source="${root.dir}/dist/${app.name}.war" 
+			action="deploy" />
 
 		<!--
 		<wldeploy 
@@ -237,12 +240,14 @@
 			
 		
 		-->
-
+		<!--
 		<antcall target="check-env" />
 		<antcall target="clean" />
 		<antcall target="init-dir" />
 		<antcall target="prepare-war" />
 		<antcall target="package-war" />
+		-->
+		<antcall target="deploy" />
 
 
 
