@@ -186,7 +186,13 @@
 	</target>
 
 	<target name="undeploy" depends="load-common-properties">
-		<wldeploy verbose="true" user="${weblogic.user}" password="${weblogic.password}" adminurl="${weblogic.adminurl}" name="${app.name}.war" action="undeploy" />
+		<wldeploy 
+			verbose="true" 
+			user="${weblogic.user}" 
+			password="${weblogic.password}" 
+			adminurl="${weblogic.adminurl}" 
+			name="${app.name}.war" 
+			action="undeploy" />
 	</target>
 
 	<target name="redeploy" depends="load-common-properties">
@@ -240,14 +246,18 @@
 			
 		
 		-->
-		<!--
+		
+		
 		<antcall target="check-env" />
 		<antcall target="clean" />
 		<antcall target="init-dir" />
 		<antcall target="prepare-war" />
 		<antcall target="package-war" />
-		-->
 		<antcall target="deploy" />
+		
+		<!--
+		<antcall target="undeploy" />
+		-->
 
 
 
