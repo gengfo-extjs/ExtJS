@@ -1,3 +1,8 @@
+---------------------------
+b**t**1***1**
+git clone git@github.com:gengfo-extjs/ExtJS.git
+
+---------------------------
 
 Global setup:
  Set up git
