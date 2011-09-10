@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	<bean id="connectionFactory"
+		class="org.apache.activemq.pool.PooledConnectionFactory">
+		<property name="connectionFactory">
+			<bean
+				class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL"
+					value="tcp://localhost:61616" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="dest" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="myDest" />
+	</bean>
+	<bean id="jmsTemplate"
+		class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="defaultDestination" ref="dest" />
+	</bean>
+	<bean id="messageSender" class="com.baobaotao.jms.MessageSender">
+		<property name="jmsTemplate" ref="jmsTemplate" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jms.connection.JmsTransactionManager">
+	   <property name="connectionFactory" ref="connectionFactory"/>
+	</bean>
+	<bean class=""></bean>
+	<tx:annotation-driven  proxy-target-class="true"/>
+</beans>

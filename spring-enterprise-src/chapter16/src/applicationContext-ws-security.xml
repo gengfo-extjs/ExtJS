@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<import resource="classpath:org/codehaus/xfire/spring/xfire.xml" />
+	<bean id="bbtForum" class="com.baobaotao.service.BbtForum" />
+	<bean id="baseWebService"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter"
+		lazy-init="false" abstract="true">
+		<property name="serviceFactory" ref="xfire.serviceFactory" />
+		<property name="xfire" ref="xfire" />
+	</bean>
+
+	<!--  请求SOAP使用UserToken进行身份认证 -->
+	<bean id="bbtForumServiceUT" parent="baseWebService">
+		<property name="serviceBean" ref="bbtForum" />
+		<property name="serviceClass"
+			value="com.baobaotao.xfire.server.BbtForumService" />
+		<property name="name" value="BbtForumServiceUT" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandler" />
+			</list>
+		</property>
+	</bean>
+	<bean id="domInHandler"
+		class="org.codehaus.xfire.util.dom.DOMInHandler" />
+	<bean id="wss4jInHandler"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">UsernameToken</prop>
+				<prop key="passwordCallbackClass">
+					com.baobaotao.xfire.wss4j.server.UtPasswordHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 请求SOAP签名 -->
+	<bean id="bbtForumServiceSign" parent="baseWebService">
+		<property name="serviceBean" ref="bbtForum" />
+		<property name="serviceClass"
+			value="com.baobaotao.xfire.server.BbtForumService" />
+		<property name="name" value="BbtForumServiceSign" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandlerSign" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="wss4jInHandlerSign"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Signature</prop>
+				<prop key="signaturePropFile">
+					com/baobaotao/xfire/wss4j/server/insecurity_sign.properties
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 请求SOAP加密 -->
+	<bean id="bbtForumServiceEnc" parent="baseWebService">
+		<property name="serviceBean" ref="bbtForum" />
+		<property name="serviceClass"
+			value="com.baobaotao.xfire.server.BbtForumService" />
+		<property name="name" value="BbtForumServiceEnc" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandlerEnc" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="wss4jInHandlerEnc"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Encrypt</prop>
+				<prop key="decryptionPropFile">
+					com/baobaotao/xfire/wss4j/server/insecurity_enc.properties
+				</prop>
+				<prop key="passwordCallbackClass">
+					com.baobaotao.xfire.wss4j.server.PasswordHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 请求SOAP加密+签名 -->
+	<bean id="bbtForumServiceEncSign" parent="baseWebService">
+		<property name="serviceBean" ref="bbtForum" />
+		<property name="serviceClass"
+			value="com.baobaotao.xfire.server.BbtForumService" />
+		<property name="name" value="BbtForumServiceEncSign" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandlerEncSign" />
+			</list>
+		</property>
+	</bean>
+	<bean id="wss4jInHandlerEncSign"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Encrypt Signature</prop>
+				<prop key="decryptionPropFile">
+					com/baobaotao/xfire/wss4j/server/insecurity_enc.properties
+				</prop>
+				<prop key="passwordCallbackClass">
+					com.baobaotao.xfire.wss4j.server.PasswordHandler
+				</prop>
+				<prop key="signaturePropFile">
+					com/baobaotao/xfire/wss4j/server/insecurity_sign.properties
+				</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- 请求SOAP和响应SOAP都进行加密 -->
+	<bean id="bbtForumServiceEnc2Way" parent="baseWebService">
+		<property name="serviceBean" ref="bbtForum" />
+		<property name="serviceClass"
+			value="com.baobaotao.xfire.server.BbtForumService" />
+		<property name="name" value="BbtForumServiceEnc2Way" />
+		<property name="inHandlers">
+			<list>
+				<ref bean="domInHandler" />
+				<ref bean="wss4jInHandlerEnc2Way" />
+			</list>
+		</property>
+		<property name="outHandlers">
+			<list>
+				<ref bean="domOutHandler" />
+				<ref bean="wss4jOutHandlerEnc2Way" />
+			</list>
+		</property>
+	</bean>
+	<bean id="wss4jInHandlerEnc2Way"
+		class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Encrypt</prop>
+				<prop key="decryptionPropFile">
+					com/baobaotao/xfire/wss4j/server/insecurity_enc.properties
+				</prop>
+				<prop key="passwordCallbackClass">
+					com.baobaotao.xfire.wss4j.server.PasswordHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="domOutHandler"
+		class="org.codehaus.xfire.util.dom.DOMOutHandler" />
+	<bean id="wss4jOutHandlerEnc2Way"
+		class="org.codehaus.xfire.security.wss4j.WSS4JOutHandler">
+		<property name="properties">
+			<props>
+				<prop key="action">Encrypt</prop>
+				<prop key="encryptionUser">client</prop>
+				<prop key="encryptionPropFile">
+					com/baobaotao/xfire/wss4j/server/outsecurity_enc.properties
+				</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

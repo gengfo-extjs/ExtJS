@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xfire 的 Aegis xml binding 配置文件 -->
+<mappings>
+	<mapping>
+		<!-- 因为Category的ProductList 中的元素非Aegis默认支持的基本类型，需要进行配置
+					 下面配置成忽略，则XML Binding时忽略该属性-->
+		<property name="products" ignore="true"/>
+	</mapping>
+</mappings>
+

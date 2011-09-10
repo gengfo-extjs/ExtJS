@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:jdbc.properties" />
+	</bean>
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName"
+			value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	<bean id="lobHandler"
+		class="org.springframework.jdbc.support.lob.DefaultLobHandler"
+		lazy-init="true" />
+	<bean id="sqlMapClient"
+		class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="lobHandler" ref="lobHandler" />
+		<property name="configLocation"
+			value="classpath:com/baobaotao/dao/ibatis/sql-map-config.xml" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	<bean id="abstractDao" abstract="true">
+		<property name="sqlMapClient" ref="sqlMapClient" />
+	</bean>
+	<bean id="forumDao" parent="abstractDao"
+		class="com.baobaotao.dao.ibatis.ForumIbatisDao" />
+	<bean id="topicDao" parent="abstractDao"
+		class="com.baobaotao.dao.ibatis.TopicIbatisDao" />
+	<bean id="postDao" parent="abstractDao"
+		class="com.baobaotao.dao.ibatis.PostIbatisDao" />
+</beans>

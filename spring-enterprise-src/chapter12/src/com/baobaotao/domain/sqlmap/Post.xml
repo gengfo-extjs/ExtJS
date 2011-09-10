@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Post">
+  <typeAlias alias="post" type="com.baobaotao.domain.Post"/>
+   <resultMap id="result" class="post">   
+        <result property="postId" column="post_id"/>   
+        <result property="userId" column="user_id"/>   
+        <result property="postText" column="post_text"   
+            typeHandler="org.springframework.orm.ibatis.support.ClobStringTypeHandler"/>   
+        <result property="postAttach" column="post_attach"   
+            typeHandler="org.springframework.orm.ibatis.support.BlobByteArrayTypeHandler"/>   
+    </resultMap> 
+  <select id="getPost" resultMap="result">
+    SELECT post_id,user_id,post_text,post_attach,post_time 
+    FROM t_post
+    WHERE post_id =#postId#
+  </select>     
+  <insert id="addPost">
+    INSERT INTO t_post(user_id,post_text,post_attach,post_time) 
+    VALUES(#userId#,
+    #postText,handler=org.springframework.orm.ibatis.support.ClobStringTypeHandler#,
+    #postAttach,handler=org.springframework.orm.ibatis.support.BlobByteArrayTypeHandler#,
+    #postTime#)
+  </insert>
+</sqlMap>

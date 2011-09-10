@@ -1,0 +1,26 @@
+#* 这是用于显示精华帖子的Velocity模板 *#
+<html>
+	<head>
+		<title>
+		  baobaotao
+		</title>
+	</head>
+	<body>
+		精华文章
+		<table>
+		    #foreach($topic in $topicList)
+				<tr>
+					<td>
+						${topic.topicId}
+					</td>
+					<td>					   
+						<a href="#springUrl('/showTopic.html?topicId=${topic.topicId}')">${topic.title}</a>
+					</td>
+					<td>
+					   ${topic.createDate}
+					</td>
+				</tr>
+			#end
+		 <table>
+	</body>
+</html>

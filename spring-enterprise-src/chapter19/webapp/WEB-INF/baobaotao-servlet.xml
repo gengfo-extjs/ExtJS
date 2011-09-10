@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/topic*.html">topicController</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>errors</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="themeSource" class="org.springframework.ui.context.support.ResourceBundleThemeSource">
+	    <property name="basenamePrefix" value="themes/"/>
+	</bean>
+
+	<bean id="themeResolver" class="org.springframework.web.servlet.theme.SessionThemeResolver">
+		<property name="defaultThemeName" value="cool"/>
+	</bean>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+	<bean id="localeInterceptor"
+		class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" />
+	<bean
+		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="localeInterceptor" />
+			</list>
+		</property>
+		<property name="order" value="1" />
+	</bean>
+
+	<!--
+		<bean 
+		class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+		<property name="order" value="2" />
+		</bean>
+	-->
+	<bean class="com.baobaotao.web.IndexController">
+		<property name="greeting" value="淘淘宝论坛欢迎您的到来!" />
+	</bean>
+
+	<bean class="com.baobaotao.web.user.UserController" />
+	<bean class="com.baobaotao.web.forum.ListForumController">
+		<property name="bbtForum" ref="bbtForum" />
+	</bean>
+	<bean class="com.baobaotao.web.forum.RefinedTopicController">
+		<property name="bbtForum" ref="bbtForum" />
+	</bean>
+	<!--
+		
+		<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+		<props>
+		<prop key="/welcome.do">forwardController</prop>
+		</props>
+		</property>
+		<property name="order" value="2" />
+		</bean>
+		<bean id="forwardController"
+		class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+		
+	-->
+	<bean name="/registerUser.html"
+		class="com.baobaotao.web.user.UserRegisterController">
+		<property name="bbtForum" ref="bbtForum" />
+		<property name="formView" value="register" />
+		<property name="successView" value="registerSuccess" />
+		<property name="validator">
+			<bean class="com.baobaotao.domain.UserValidator" />
+		</property>
+	</bean>
+
+	<bean name="/fullRegisterUser.html"
+		class="com.baobaotao.web.user.FullUserRegisterController">
+		<property name="bbtForum" ref="bbtForum" />
+		<property name="commandClass"
+			value="com.baobaotao.domain.FullUser" />
+		<property name="pages" value="fullRegister,relation,favorite" />
+		<property name="cancelView" value="main" />
+		<property name="successView" value="welcome" />
+		<property name="validator">
+			<bean class="com.baobaotao.domain.FullUserValidator" />
+		</property>
+	</bean>
+	<bean name="topicController"
+		class="com.baobaotao.web.topic.TopicController">
+		<property name="bbtForum" ref="bbtForum" />
+		<property name="methodNameResolver" ref="methodNameResolver" />
+	</bean>
+	<bean id="methodNameResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.PropertiesMethodNameResolver">
+		<property name="mappings">
+			<props>
+				<prop key="/topicShow.html">showTopic</prop>
+				<prop key="/topicDelete.html">deleteTopic</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!--
+		<bean id="methodNameResolver"
+		class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+		<property name="paramName" value="method" />
+		</bean>
+	-->
+
+	<bean name="/themeTest.html"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="themeTest" />
+	</bean>
+	<!--
+		
+		<bean name="/test.html"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="test" />
+		</bean>
+		
+		<bean id="urlMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+		<props>
+		<prop key="/welcome.html">forwardController</prop>
+		<prop key="/help.html">forwardController</prop>
+		</props>
+		</property>
+		</bean>
+		<bean id="forwardController"
+		class="org.springframework.web.servlet.mvc.UrlFilenameViewController" />
+	-->
+	<bean name="/listRefinedTopic.html"
+		class="com.baobaotao.web.topic.ListDefinedTopicController"
+		scope="prototype">
+		<property name="bbtForum" ref="bbtForum" />
+	</bean>
+	<bean
+		class="org.springframework.web.servlet.mvc.throwaway.ThrowawayControllerHandlerAdapter" />
+	<bean
+		class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />
+	<!--
+		<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8"/>
+		<property name="maxUploadSize" value="100000"/>
+		<property name="uploadTempDir" value="upload/temp"/>
+		</bean>
+	-->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8" />
+		<property name="maxUploadSize" value="100000" />
+		<property name="uploadTempDir" value="upload/temp" />
+	</bean>
+
+	<bean name="/createPost.html"
+		class="com.baobaotao.web.post.PostController">
+		<property name="bbtForum" ref="bbtForum" />
+		<property name="commandClass" value="com.baobaotao.domain.Post" />
+		<property name="formView" value="createPost" />
+		<property name="successView" value="success" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix">
+			<value>/WEB-INF/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+</beans>

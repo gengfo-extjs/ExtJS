@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+   <bean id="car" class="com.baobaotao.scope.Car" scope="singleton"/>
+   <bean id="boss1" class="com.baobaotao.scope.Boss" lazy-init="true">
+       <property name="car" ref="car"/>
+   </bean>
+   <bean id="boss2" class="com.baobaotao.scope.Boss" scope="prototype">
+       <property name="car" ref="car"/>
+   </bean>
+   <bean id="boss3" class="com.baobaotao.scope.Boss">
+       <property name="car" ref="car"/>
+   </bean>
+</beans>

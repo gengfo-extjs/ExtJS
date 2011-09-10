@@ -1,0 +1,14 @@
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration//EN"
+  "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+<tiles-definitions>
+	<definition name="base" page="/WEB-INF/tiles/template.jsp">
+		<put name="title" value="宝宝淘论坛" />
+		<put name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put name="body" value="/WEB-INF/tiles/blank.jsp" />
+		<put name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+	<definition name="listRefinedTopic" extends="base">
+	    <put name="body" value="/WEB-INF/tiles/listRefinedTopic.jsp" />
+	</definition>
+</tiles-definitions>

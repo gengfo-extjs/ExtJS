@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+   <!-- bean id="car" class="com.baobaotao.reflect.Car">
+      <property name="brand" value="红旗CA72"/>
+      <property name="color" value="黑色"/>
+      <property name="maxSpeed" value="200"/>
+   </bean-->
+   
+   <bean id="car" class="com.baobaotao.beanfactory.Car" init-method="myInit" destroy-method="myDestory">
+      <property name="brand" value="红旗CA72"/>
+   </bean>   
+</beans>

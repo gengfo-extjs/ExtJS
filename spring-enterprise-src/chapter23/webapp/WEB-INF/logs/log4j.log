@@ -1,0 +1,4001 @@
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1055) -   Fire end() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:932) - characters(
+    )
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1000) - endElement(,,mime-mapping)
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping'
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1004) -   bodyText='
+        
+        
+    '
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1025) -   Fire body() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1045) -   Popping body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    '
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:1055) -   Fire end() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,187 DEBUG [main] (CallMethodRule.java:576) - [CallMethodRule]{web-app/mime-mapping} Call org.apache.catalina.core.StandardContext.addMimeMapping(Z/java.lang.String,application/x-compress/java.lang.String)
+2007-06-15 23:34:36,187 DEBUG [main] (Digester.java:932) - characters(
+    )
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1233) - startElement(,,mime-mapping)
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    '
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1262) -   New match='web-app/mime-mapping'
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1233) - startElement(,,extension)
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        '
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1262) -   New match='web-app/mime-mapping/extension'
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallParamRule[paramIndex=0, attributeName=null, from stack=false]
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:932) - characters(z)
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1000) - endElement(,,extension)
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping/extension'
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1004) -   bodyText='z'
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1025) -   Fire body() for CallParamRule[paramIndex=0, attributeName=null, from stack=false]
+2007-06-15 23:34:36,203 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        '
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1055) -   Fire end() for CallParamRule[paramIndex=0, attributeName=null, from stack=false]
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1233) - startElement(,,mime-type)
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        
+        '
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1262) -   New match='web-app/mime-mapping/mime-type'
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:932) - characters(application/x-compress)
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1000) - endElement(,,mime-type)
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping/mime-type'
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1004) -   bodyText='application/x-compress'
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1025) -   Fire body() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        
+        '
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1055) -   Fire end() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:932) - characters(
+    )
+2007-06-15 23:34:36,218 DEBUG [main] (Digester.java:1000) - endElement(,,mime-mapping)
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping'
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1004) -   bodyText='
+        
+        
+    '
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1025) -   Fire body() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1045) -   Popping body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    '
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1055) -   Fire end() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,234 DEBUG [main] (CallMethodRule.java:576) - [CallMethodRule]{web-app/mime-mapping} Call org.apache.catalina.core.StandardContext.addMimeMapping(z/java.lang.String,application/x-compress/java.lang.String)
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:932) - characters(
+    )
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1233) - startElement(,,mime-mapping)
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    '
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1262) -   New match='web-app/mime-mapping'
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1233) - startElement(,,extension)
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        '
+2007-06-15 23:34:36,234 DEBUG [main] (Digester.java:1262) -   New match='web-app/mime-mapping/extension'
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallParamRule[paramIndex=0, attributeName=null, from stack=false]
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:932) - characters(zip)
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1000) - endElement(,,extension)
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping/extension'
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1004) -   bodyText='zip'
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1025) -   Fire body() for CallParamRule[paramIndex=0, attributeName=null, from stack=false]
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        '
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1055) -   Fire end() for CallParamRule[paramIndex=0, attributeName=null, from stack=false]
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1233) - startElement(,,mime-type)
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        
+        '
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1262) -   New match='web-app/mime-mapping/mime-type'
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:932) - characters(application/zip)
+2007-06-15 23:34:36,250 DEBUG [main] (Digester.java:1000) - endElement(,,mime-type)
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping/mime-type'
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1004) -   bodyText='application/zip'
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1025) -   Fire body() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        
+        '
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1055) -   Fire end() for CallParamRule[paramIndex=1, attributeName=null, from stack=false]
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:932) - characters(
+    )
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1000) - endElement(,,mime-mapping)
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1003) -   match='web-app/mime-mapping'
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1004) -   bodyText='
+        
+        
+    '
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1025) -   Fire body() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1045) -   Popping body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    '
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:1055) -   Fire end() for CallMethodRule[methodName=addMimeMapping, paramCount=2, paramTypes={java.lang.String, java.lang.String}]
+2007-06-15 23:34:36,265 DEBUG [main] (CallMethodRule.java:576) - [CallMethodRule]{web-app/mime-mapping} Call org.apache.catalina.core.StandardContext.addMimeMapping(zip/java.lang.String,application/zip/java.lang.String)
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:932) - characters(
+
+
+  )
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,265 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+  )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+
+    )
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:1233) - startElement(,,welcome-file-list)
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    '
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:1262) -   New match='web-app/welcome-file-list'
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:1286) -   No rules found matching 'web-app/welcome-file-list'.
+2007-06-15 23:34:36,281 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1233) - startElement(,,welcome-file)
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        '
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1262) -   New match='web-app/welcome-file-list/welcome-file'
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:932) - characters(index.html)
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1000) - endElement(,,welcome-file)
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1003) -   match='web-app/welcome-file-list/welcome-file'
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1004) -   bodyText='index.html'
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1025) -   Fire body() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        '
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1055) -   Fire end() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,296 DEBUG [main] (CallMethodRule.java:576) - [CallMethodRule]{web-app/welcome-file-list/welcome-file} Call org.apache.catalina.core.StandardContext.addWelcomeFile(index.html/java.lang.String)
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1233) - startElement(,,welcome-file)
+2007-06-15 23:34:36,296 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        
+        '
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1262) -   New match='web-app/welcome-file-list/welcome-file'
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:932) - characters(index.htm)
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1000) - endElement(,,welcome-file)
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1003) -   match='web-app/welcome-file-list/welcome-file'
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1004) -   bodyText='index.htm'
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1025) -   Fire body() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        
+        '
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1055) -   Fire end() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,312 DEBUG [main] (CallMethodRule.java:576) - [CallMethodRule]{web-app/welcome-file-list/welcome-file} Call org.apache.catalina.core.StandardContext.addWelcomeFile(index.htm/java.lang.String)
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:932) - characters(
+        )
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1233) - startElement(,,welcome-file)
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1243) -   Pushing body text '
+        
+        
+        '
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1262) -   New match='web-app/welcome-file-list/welcome-file'
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:1273) -   Fire begin() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,312 DEBUG [main] (Digester.java:932) - characters(index.jsp)
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1000) - endElement(,,welcome-file)
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1003) -   match='web-app/welcome-file-list/welcome-file'
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1004) -   bodyText='index.jsp'
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1025) -   Fire body() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1045) -   Popping body text '
+        
+        
+        '
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1055) -   Fire end() for CallMethodRule[methodName=addWelcomeFile, paramCount=0, paramTypes={java.lang.String}]
+2007-06-15 23:34:36,328 DEBUG [main] (CallMethodRule.java:576) - [CallMethodRule]{web-app/welcome-file-list/welcome-file} Call org.apache.catalina.core.StandardContext.addWelcomeFile(index.jsp/java.lang.String)
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:932) - characters(
+    )
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1000) - endElement(,,welcome-file-list)
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1003) -   match='web-app/welcome-file-list'
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1004) -   bodyText='
+        
+        
+        
+    '
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1038) -   No rules found matching 'web-app/welcome-file-list'.
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1045) -   Popping body text '
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    '
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:932) - characters(
+
+)
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1000) - endElement(,,web-app)
+2007-06-15 23:34:36,328 DEBUG [main] (Digester.java:1003) -   match='web-app'
+2007-06-15 23:34:36,343 DEBUG [main] (Digester.java:1004) -   bodyText='
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+  
+
+
+  
+  
+  
+  
+
+    
+    
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+    
+
+
+
+
+  
+  
+  
+
+    
+
+
+  
+  
+  
+  
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    
+
+'
+2007-06-15 23:34:36,343 DEBUG [main] (Digester.java:1025) -   Fire body() for org.apache.catalina.startup.SetPublicIdRule@118fa47
+2007-06-15 23:34:36,343 DEBUG [main] (Digester.java:1045) -   Popping body text ''
+2007-06-15 23:34:36,343 DEBUG [main] (Digester.java:1055) -   Fire end() for org.apache.catalina.startup.SetPublicIdRule@118fa47
+2007-06-15 23:34:36,343 DEBUG [main] (Digester.java:952) - endDocument()
+2007-06-15 23:34:36,937 DEBUG [http-80-Processor25] (CommonsRequestLoggingFilter.java:41) - Before request [/baobaotao/test.jsp]
+2007-06-15 23:34:36,937 DEBUG [http-80-Processor25] (JspServlet.java:224) - JspEngine --> /test.jsp
+2007-06-15 23:34:36,937 DEBUG [http-80-Processor25] (JspServlet.java:225) - 	     ServletPath: /test.jsp
+2007-06-15 23:34:36,937 DEBUG [http-80-Processor25] (JspServlet.java:226) - 	        PathInfo: null
+2007-06-15 23:34:36,937 DEBUG [http-80-Processor25] (JspServlet.java:227) - 	        RealPath: D:\masterSpring\chapter23\webapp\test.jsp
+2007-06-15 23:34:36,937 DEBUG [http-80-Processor25] (JspServlet.java:228) - 	      RequestURI: /baobaotao/test.jsp
+2007-06-15 23:34:36,953 DEBUG [http-80-Processor25] (JspServlet.java:229) - 	     QueryString: null
+2007-06-15 23:34:36,953 DEBUG [http-80-Processor25] (JspServlet.java:230) - 	  Request Params: 
+2007-06-15 23:34:37,015 DEBUG [http-80-Processor25] (Compiler.java:377) - Compiler: outdated: D:\tomcat\tomcat-5.5.9\work\Catalina\localhost\baobaotao\org\apache\jsp\test_jsp.class 1181828154000
+2007-06-15 23:34:37,515 DEBUG [http-80-Processor25] (Compiler.java:200) - Generated /D:/tomcat/tomcat-5.5.9/work/Catalina/localhost/baobaotao//org/apache/jsp\test_jsp.java total=484 generate=234 validate=234
+2007-06-15 23:34:38,906 DEBUG [http-80-Processor25] (JDTCompiler.java:402) - Compiled /D:/tomcat/tomcat-5.5.9/work/Catalina/localhost/baobaotao//org/apache/jsp\test_jsp.java 1375ms
+2007-06-15 23:34:38,921 DEBUG [http-80-Processor25] (SmapUtil.java:291) - constant pool count: 151
+2007-06-15 23:34:38,921 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 1 read class attr -- 'org/apache/jsp/test_jsp'
+2007-06-15 23:34:38,921 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 2 copying 2 bytes
+2007-06-15 23:34:38,921 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 3 read class attr -- 'org/apache/jasper/runtime/HttpJspBase'
+2007-06-15 23:34:38,921 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 4 copying 2 bytes
+2007-06-15 23:34:38,921 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 5 read class attr -- 'org/apache/jasper/runtime/JspSourceDependent'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 6 copying 2 bytes
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 7 read class attr -- '_jspx_dependants'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 8 read class attr -- 'Ljava/util/Vector;'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 9 read class attr -- '<init>'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 10 read class attr -- '()V'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 11 read class attr -- 'Code'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 12 copying 4 bytes
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 13 copying 4 bytes
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 14 read class attr -- 'LineNumberTable'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 15 read class attr -- 'LocalVariableTable'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 16 read class attr -- 'this'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 17 read class attr -- 'Lorg/apache/jsp/test_jsp;'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 18 read class attr -- 'getDependants'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 19 read class attr -- '()Ljava/util/List;'
+2007-06-15 23:34:38,937 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 20 copying 4 bytes
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 21 copying 4 bytes
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 22 read class attr -- '_jspService'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 23 read class attr -- '(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 24 read class attr -- 'Exceptions'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 25 read class attr -- 'java/io/IOException'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 26 copying 2 bytes
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 27 read class attr -- 'javax/servlet/ServletException'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 28 copying 2 bytes
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 29 read class attr -- 'javax/servlet/jsp/JspFactory'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 30 copying 2 bytes
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 31 read class attr -- 'getDefaultFactory'
+2007-06-15 23:34:38,953 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 32 read class attr -- '()Ljavax/servlet/jsp/JspFactory;'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 33 copying 4 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 34 copying 4 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 35 read class attr -- 'text/html; charset=utf-8'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 36 copying 2 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 37 read class attr -- 'javax/servlet/http/HttpServletResponse'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 38 copying 2 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 39 read class attr -- 'setContentType'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 40 read class attr -- '(Ljava/lang/String;)V'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 41 copying 4 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 42 copying 4 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 43 read class attr -- 'getPageContext'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 44 read class attr -- '(Ljavax/servlet/Servlet;Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljava/lang/String;ZIZ)Ljavax/servlet/jsp/PageContext;'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 45 copying 4 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 46 copying 4 bytes
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 47 read class attr -- 'javax/servlet/jsp/PageContext'
+2007-06-15 23:34:38,968 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 48 copying 2 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 49 read class attr -- 'getServletContext'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 50 read class attr -- '()Ljavax/servlet/ServletContext;'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 51 copying 4 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 52 copying 4 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 53 read class attr -- 'getServletConfig'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 54 read class attr -- '()Ljavax/servlet/ServletConfig;'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 55 copying 4 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 56 copying 4 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 57 read class attr -- 'getSession'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 58 read class attr -- '()Ljavax/servlet/http/HttpSession;'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 59 copying 4 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 60 copying 4 bytes
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 61 read class attr -- 'getOut'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 62 read class attr -- '()Ljavax/servlet/jsp/JspWriter;'
+2007-06-15 23:34:38,984 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 63 copying 4 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 64 copying 4 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 65 read class attr -- '
+'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 66 copying 2 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 67 read class attr -- 'javax/servlet/jsp/JspWriter'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 68 copying 2 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 69 read class attr -- 'write'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 70 copying 4 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 71 copying 4 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 72 read class attr -- '
+'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 73 copying 2 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 74 read class attr -- 'org/springframework/web/context/support/ServletContextResource'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 75 copying 2 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 76 read class attr -- '/WEB-INF/classes/conf/file1.txt'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 77 copying 2 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 78 read class attr -- '(Ljavax/servlet/ServletContext;Ljava/lang/String;)V'
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 79 copying 4 bytes
+2007-06-15 23:34:39,000 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 80 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 81 read class attr -- 'org/springframework/core/io/Resource'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 82 copying 2 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 83 read class attr -- 'getFilename'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 84 read class attr -- '()Ljava/lang/String;'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 85 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 86 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 87 read class attr -- 'print'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 88 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 89 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 90 read class attr -- 'org/springframework/web/util/WebUtils'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 91 copying 2 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 92 read class attr -- 'getTempDir'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 93 read class attr -- '(Ljavax/servlet/ServletContext;)Ljava/io/File;'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 94 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 95 copying 4 bytes
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 96 read class attr -- 'java/io/File'
+2007-06-15 23:34:39,015 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 97 copying 2 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 98 read class attr -- 'getAbsolutePath'
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 99 copying 4 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 100 copying 4 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 101 read class attr -- '(I)V'
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 102 copying 4 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 103 copying 4 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 104 read class attr -- 'baobaotao.root'
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 105 copying 2 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 106 read class attr -- 'java/lang/System'
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 107 copying 2 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 108 read class attr -- 'getProperty'
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 109 read class attr -- '(Ljava/lang/String;)Ljava/lang/String;'
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 110 copying 4 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 111 copying 4 bytes
+2007-06-15 23:34:39,031 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 112 read class attr -- 'javax/servlet/jsp/SkipPageException'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 113 copying 2 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 114 read class attr -- 'getBufferSize'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 115 read class attr -- '()I'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 116 copying 4 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 117 copying 4 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 118 read class attr -- 'clearBuffer'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 119 copying 4 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 120 copying 4 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 121 read class attr -- 'handlePageException'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 122 read class attr -- '(Ljava/lang/Throwable;)V'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 123 copying 4 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 124 copying 4 bytes
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 125 read class attr -- 'releasePageContext'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 126 read class attr -- '(Ljavax/servlet/jsp/PageContext;)V'
+2007-06-15 23:34:39,046 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 127 copying 4 bytes
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:455) - 128 copying 4 bytes
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 129 read class attr -- 'java/lang/Throwable'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:445) - 130 copying 2 bytes
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 131 read class attr -- 'request'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 132 read class attr -- 'Ljavax/servlet/http/HttpServletRequest;'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 133 read class attr -- 'response'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 134 read class attr -- 'Ljavax/servlet/http/HttpServletResponse;'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 135 read class attr -- '_jspxFactory'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 136 read class attr -- 'Ljavax/servlet/jsp/JspFactory;'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 137 read class attr -- 'pageContext'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 138 read class attr -- 'Ljavax/servlet/jsp/PageContext;'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 139 read class attr -- 'application'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 140 read class attr -- 'Ljavax/servlet/ServletContext;'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 141 read class attr -- 'out'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 142 read class attr -- 'Ljavax/servlet/jsp/JspWriter;'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 143 read class attr -- '_jspx_out'
+2007-06-15 23:34:39,062 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 144 read class attr -- '_jspx_page_context'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 145 read class attr -- 'res3'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 146 read class attr -- 'Lorg/springframework/core/io/Resource;'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 147 read class attr -- 't'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 148 read class attr -- 'Ljava/lang/Throwable;'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 149 read class attr -- 'SourceFile'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:471) - 150 read class attr -- 'org.apache.jsp.test_jsp'
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:306) - SourceDebugExtension not found, installed at: 151
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:315) - interfaceCount: 1
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:339) - members count: 1
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:345) - member attr count: 0
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:339) - members count: 3
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:345) - member attr count: 1
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:365) - attr len: 47
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:345) - member attr count: 1
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:365) - attr len: 46
+2007-06-15 23:34:39,078 DEBUG [http-80-Processor25] (SmapUtil.java:345) - member attr count: 2
+2007-06-15 23:34:39,093 DEBUG [http-80-Processor25] (SmapUtil.java:365) - attr len: 6
+2007-06-15 23:34:39,093 DEBUG [http-80-Processor25] (SmapUtil.java:365) - attr len: 576
+2007-06-15 23:34:39,093 DEBUG [http-80-Processor25] (SmapUtil.java:323) - class attrCount: 1
+2007-06-15 23:34:39,093 DEBUG [http-80-Processor25] (SmapUtil.java:365) - attr len: 2
+2007-06-15 23:34:39,093 DEBUG [http-80-Processor25] (SmapUtil.java:330) - class attrCount incremented
+2007-06-15 23:34:39,156 DEBUG [http-80-Processor25] (CommonsRequestLoggingFilter.java:50) - After request [/baobaotao/test.jsp]
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (CommonsRequestLoggingFilter.java:41) - Before request [/baobaotao/test.jsp]
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:224) - JspEngine --> /test.jsp
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:225) - 	     ServletPath: /test.jsp
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:226) - 	        PathInfo: null
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:227) - 	        RealPath: D:\masterSpring\chapter23\webapp\test.jsp
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:228) - 	      RequestURI: /baobaotao/test.jsp
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:229) - 	     QueryString: null
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (JspServlet.java:230) - 	  Request Params: 
+2007-06-15 23:34:53,296 DEBUG [http-80-Processor24] (Compiler.java:377) - Compiler: outdated: D:\tomcat\tomcat-5.5.9\work\Catalina\localhost\baobaotao\org\apache\jsp\test_jsp.class 1181921680000
+2007-06-15 23:34:53,312 DEBUG [http-80-Processor24] (Compiler.java:200) - Generated /D:/tomcat/tomcat-5.5.9/work/Catalina/localhost/baobaotao//org/apache/jsp\test_jsp.java total=16 generate=0 validate=16
+2007-06-15 23:34:53,531 DEBUG [http-80-Processor24] (JDTCompiler.java:402) - Compiled /D:/tomcat/tomcat-5.5.9/work/Catalina/localhost/baobaotao//org/apache/jsp\test_jsp.java 219ms
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:291) - constant pool count: 150
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 1 read class attr -- 'org/apache/jsp/test_jsp'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 2 copying 2 bytes
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 3 read class attr -- 'org/apache/jasper/runtime/HttpJspBase'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 4 copying 2 bytes
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 5 read class attr -- 'org/apache/jasper/runtime/JspSourceDependent'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 6 copying 2 bytes
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 7 read class attr -- '_jspx_dependants'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 8 read class attr -- 'Ljava/util/Vector;'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 9 read class attr -- '<init>'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 10 read class attr -- '()V'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 11 read class attr -- 'Code'
+2007-06-15 23:34:53,546 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 12 copying 4 bytes
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 13 copying 4 bytes
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 14 read class attr -- 'LineNumberTable'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 15 read class attr -- 'LocalVariableTable'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 16 read class attr -- 'this'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 17 read class attr -- 'Lorg/apache/jsp/test_jsp;'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 18 read class attr -- 'getDependants'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 19 read class attr -- '()Ljava/util/List;'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 20 copying 4 bytes
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 21 copying 4 bytes
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 22 read class attr -- '_jspService'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 23 read class attr -- '(Ljavax/servlet/http/HttpServletRequest;Ljavax/servlet/http/HttpServletResponse;)V'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 24 read class attr -- 'Exceptions'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 25 read class attr -- 'java/io/IOException'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 26 copying 2 bytes
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 27 read class attr -- 'javax/servlet/ServletException'
+2007-06-15 23:34:53,562 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 28 copying 2 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 29 read class attr -- 'javax/servlet/jsp/JspFactory'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 30 copying 2 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 31 read class attr -- 'getDefaultFactory'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 32 read class attr -- '()Ljavax/servlet/jsp/JspFactory;'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 33 copying 4 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 34 copying 4 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 35 read class attr -- 'text/html; charset=utf-8'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 36 copying 2 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 37 read class attr -- 'javax/servlet/http/HttpServletResponse'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 38 copying 2 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 39 read class attr -- 'setContentType'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 40 read class attr -- '(Ljava/lang/String;)V'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 41 copying 4 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 42 copying 4 bytes
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 43 read class attr -- 'getPageContext'
+2007-06-15 23:34:53,578 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 44 read class attr -- '(Ljavax/servlet/Servlet;Ljavax/servlet/ServletRequest;Ljavax/servlet/ServletResponse;Ljava/lang/String;ZIZ)Ljavax/servlet/jsp/PageContext;'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 45 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 46 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 47 read class attr -- 'javax/servlet/jsp/PageContext'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 48 copying 2 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 49 read class attr -- 'getServletContext'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 50 read class attr -- '()Ljavax/servlet/ServletContext;'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 51 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 52 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 53 read class attr -- 'getServletConfig'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 54 read class attr -- '()Ljavax/servlet/ServletConfig;'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 55 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 56 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 57 read class attr -- 'getSession'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 58 read class attr -- '()Ljavax/servlet/http/HttpSession;'
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 59 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 60 copying 4 bytes
+2007-06-15 23:34:53,593 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 61 read class attr -- 'getOut'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 62 read class attr -- '()Ljavax/servlet/jsp/JspWriter;'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 63 copying 4 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 64 copying 4 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 65 read class attr -- '
+'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 66 copying 2 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 67 read class attr -- 'javax/servlet/jsp/JspWriter'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 68 copying 2 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 69 read class attr -- 'write'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 70 copying 4 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 71 copying 4 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 72 read class attr -- '
+'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 73 copying 2 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 74 read class attr -- 'org/springframework/web/context/support/ServletContextResource'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 75 copying 2 bytes
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 76 read class attr -- '/WEB-INF/classes/conf/file1.txt'
+2007-06-15 23:34:53,609 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 77 copying 2 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 78 read class attr -- '(Ljavax/servlet/ServletContext;Ljava/lang/String;)V'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 79 copying 4 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 80 copying 4 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 81 read class attr -- 'org/springframework/core/io/Resource'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 82 copying 2 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 83 read class attr -- 'getFilename'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 84 read class attr -- '()Ljava/lang/String;'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 85 copying 4 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 86 copying 4 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 87 read class attr -- 'print'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 88 copying 4 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 89 copying 4 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 90 read class attr -- 'org/springframework/web/util/WebUtils'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 91 copying 2 bytes
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 92 read class attr -- 'getTempDir'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 93 read class attr -- '(Ljavax/servlet/ServletContext;)Ljava/io/File;'
+2007-06-15 23:34:53,625 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 94 copying 4 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 95 copying 4 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 96 read class attr -- 'java/io/File'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 97 copying 2 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 98 read class attr -- 'getAbsolutePath'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 99 copying 4 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 100 copying 4 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 101 read class attr -- '<br>
+'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 102 copying 2 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 103 read class attr -- 'baobaotao.root'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 104 copying 2 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 105 read class attr -- 'java/lang/System'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 106 copying 2 bytes
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 107 read class attr -- 'getProperty'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 108 read class attr -- '(Ljava/lang/String;)Ljava/lang/String;'
+2007-06-15 23:34:53,640 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 109 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 110 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 111 read class attr -- 'javax/servlet/jsp/SkipPageException'
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 112 copying 2 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 113 read class attr -- 'getBufferSize'
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 114 read class attr -- '()I'
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 115 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 116 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 117 read class attr -- 'clearBuffer'
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 118 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 119 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 120 read class attr -- 'handlePageException'
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 121 read class attr -- '(Ljava/lang/Throwable;)V'
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 122 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 123 copying 4 bytes
+2007-06-15 23:34:53,656 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 124 read class attr -- 'releasePageContext'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 125 read class attr -- '(Ljavax/servlet/jsp/PageContext;)V'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 126 copying 4 bytes
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:455) - 127 copying 4 bytes
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 128 read class attr -- 'java/lang/Throwable'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:445) - 129 copying 2 bytes
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 130 read class attr -- 'request'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 131 read class attr -- 'Ljavax/servlet/http/HttpServletRequest;'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 132 read class attr -- 'response'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 133 read class attr -- 'Ljavax/servlet/http/HttpServletResponse;'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 134 read class attr -- '_jspxFactory'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 135 read class attr -- 'Ljavax/servlet/jsp/JspFactory;'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 136 read class attr -- 'pageContext'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 137 read class attr -- 'Ljavax/servlet/jsp/PageContext;'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 138 read class attr -- 'application'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 139 read class attr -- 'Ljavax/servlet/ServletContext;'
+2007-06-15 23:34:53,671 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 140 read class attr -- 'out'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 141 read class attr -- 'Ljavax/servlet/jsp/JspWriter;'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 142 read class attr -- '_jspx_out'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 143 read class attr -- '_jspx_page_context'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 144 read class attr -- 'res3'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 145 read class attr -- 'Lorg/springframework/core/io/Resource;'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 146 read class attr -- 't'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 147 read class attr -- 'Ljava/lang/Throwable;'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 148 read class attr -- 'SourceFile'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:471) - 149 read class attr -- 'org.apache.jsp.test_jsp'
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:306) - SourceDebugExtension not found, installed at: 150
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:315) - interfaceCount: 1
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:339) - members count: 1
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:345) - member attr count: 0
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:339) - members count: 3
+2007-06-15 23:34:53,687 DEBUG [http-80-Processor24] (SmapUtil.java:345) - member attr count: 1
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:365) - attr len: 47
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:345) - member attr count: 1
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:365) - attr len: 46
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:345) - member attr count: 2
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:365) - attr len: 6
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:365) - attr len: 576
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:323) - class attrCount: 1
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:365) - attr len: 2
+2007-06-15 23:34:53,703 DEBUG [http-80-Processor24] (SmapUtil.java:330) - class attrCount incremented
+2007-06-15 23:34:53,718 DEBUG [http-80-Processor24] (CommonsRequestLoggingFilter.java:50) - After request [/baobaotao/test.jsp]
+2007-06-15 23:35:36,375 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181921736375 sessioncount 1
+2007-06-15 23:35:36,375 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:36:36,390 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181921796390 sessioncount 1
+2007-06-15 23:36:36,390 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:37:36,406 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181921856406 sessioncount 1
+2007-06-15 23:37:36,406 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:38:36,421 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181921916421 sessioncount 1
+2007-06-15 23:38:36,437 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 16 expired sessions: 0
+2007-06-15 23:39:36,453 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181921976453 sessioncount 1
+2007-06-15 23:39:36,453 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:40:36,468 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922036468 sessioncount 1
+2007-06-15 23:40:36,468 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:41:36,484 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922096484 sessioncount 1
+2007-06-15 23:41:36,484 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:42:36,500 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922156500 sessioncount 1
+2007-06-15 23:42:36,500 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:43:36,515 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922216515 sessioncount 1
+2007-06-15 23:43:36,515 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:44:36,531 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922276531 sessioncount 1
+2007-06-15 23:44:36,531 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:45:36,546 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922336546 sessioncount 1
+2007-06-15 23:45:36,546 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:46:36,578 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922396578 sessioncount 1
+2007-06-15 23:46:36,578 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:47:36,593 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922456593 sessioncount 1
+2007-06-15 23:47:36,593 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:48:36,609 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922516609 sessioncount 1
+2007-06-15 23:48:36,609 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:49:36,625 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922576625 sessioncount 1
+2007-06-15 23:49:36,625 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:50:36,656 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922636656 sessioncount 1
+2007-06-15 23:50:36,656 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:51:36,671 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922696671 sessioncount 1
+2007-06-15 23:51:36,671 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:52:36,687 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922756687 sessioncount 1
+2007-06-15 23:52:36,687 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:53:36,703 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922816703 sessioncount 1
+2007-06-15 23:53:36,703 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:54:36,718 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922876718 sessioncount 1
+2007-06-15 23:54:36,718 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:55:36,750 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922936750 sessioncount 1
+2007-06-15 23:55:36,750 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:56:36,765 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181922996765 sessioncount 1
+2007-06-15 23:56:36,765 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:57:36,781 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923056781 sessioncount 1
+2007-06-15 23:57:36,781 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:58:36,796 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923116796 sessioncount 1
+2007-06-15 23:58:36,796 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-15 23:59:36,812 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923176812 sessioncount 1
+2007-06-15 23:59:36,812 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-16 00:00:36,859 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923236859 sessioncount 1
+2007-06-16 00:00:36,859 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-16 00:01:36,875 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923296875 sessioncount 1
+2007-06-16 00:01:36,875 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-16 00:02:36,890 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923356890 sessioncount 1
+2007-06-16 00:02:36,890 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-16 00:03:36,906 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923416906 sessioncount 1
+2007-06-16 00:03:36,906 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-16 00:04:36,921 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:653) - Start expire sessions StandardManager at 1181923476921 sessioncount 1
+2007-06-16 00:04:36,921 DEBUG [ContainerBackgroundProcessor[StandardEngine[Catalina]]] (ManagerBase.java:662) - End expire sessions StandardManager processingTime 0 expired sessions: 0
+2007-06-16 00:05:13,500 DEBUG [Thread-58] (StandardContext.java:3564) - Stopping filters
+2007-06-16 00:05:13,500 DEBUG [Thread-58] (StandardContext.java:3572) -  Stopping filter 'logFilter'
+2007-06-16 00:05:13,500 DEBUG [Thread-58] (StandardManager.java:653) - Stopping
+2007-06-16 00:05:13,500 DEBUG [Thread-58] (StandardManager.java:477) - Unloading persisted sessions
+2007-06-16 00:05:13,500 DEBUG [Thread-58] (StandardManager.java:484) - Saving persisted sessions to SESSIONS.ser
+2007-06-16 00:05:13,515 DEBUG [Thread-58] (StandardManager.java:507) - Unloading 1 sessions
+2007-06-16 00:05:13,515 DEBUG [Thread-58] (StandardSession.java:1416) - writeObject() storing session 5558350B86DE365B17FECFE849C99CA3
+2007-06-16 00:05:13,515 DEBUG [Thread-58] (StandardManager.java:551) - Expiring 1 persisted sessions
+2007-06-16 00:05:13,515 DEBUG [Thread-58] (StandardManager.java:563) - Unloading complete
+2007-06-16 00:05:13,515 DEBUG [Thread-58] (JspServlet.java:256) - JspServlet.destroy()
+2007-06-16 00:05:13,531  INFO [Thread-58] (ApplicationContext.java:636) - Closing Spring root WebApplicationContext
+2007-06-16 00:05:13,531  INFO [Thread-58] (AbstractApplicationContext.java:672) - Closing org.springframework.web.context.support.XmlWebApplicationContext@70be88: display name [Root WebApplicationContext]; startup date [Fri Jun 15 23:34:28 CST 2007]; root of context hierarchy
+2007-06-16 00:05:13,531 DEBUG [Thread-58] (AbstractApplicationContext.java:244) - Publishing event in context [org.springframework.web.context.support.XmlWebApplicationContext@70be88]: org.springframework.context.event.ContextClosedEvent[source=org.springframework.web.context.support.XmlWebApplicationContext@70be88: display name [Root WebApplicationContext]; startup date [Fri Jun 15 23:34:28 CST 2007]; root of context hierarchy]
+2007-06-16 00:05:13,531  INFO [Thread-58] (DefaultSingletonBeanRegistry.java:285) - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4d2af2: defining beans [test]; root of factory hierarchy
+2007-06-16 00:05:13,531  INFO [Thread-58] (ApplicationContext.java:636) - Shutting down Log4J

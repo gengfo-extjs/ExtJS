@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+编译worklog中的数据库连接
+-->
+<project basedir="." default="build" name="baobaotao">
+
+	<!-- 定义变量 -->
+	<property name="project.name" value="baobaotao" />
+	<property name="src.dir" value="src" />
+	<!-- Java源文件目录 -->
+
+	<!-- 编译好的类及生成的javadoc文档目录 -->
+	<property name="build.dir" value="WebRoot/WEB-INF/classes" />
+	<property name="weblib.dir" value="WebRoot/WEB-INF/lib" />
+	<property name="war.dir" value="WebRoot" />
+	<property name="dist.dir" value="dist" />
+	<property name="spring.root" value="../spring" />
+	<property name="jdbclib.root" value="../extraLib/jdbclib" />
+
+	<!-- 用到的外部类包，即classpath -->
+	<path id="project.class.path">
+		<fileset dir="${spring.root}/dist">
+			<include name="spring.jar" />
+		</fileset>
+		<fileset dir="${spring.root}/lib/log4j">
+			<include name="log4j-1.2.14.jar" />
+		</fileset>
+		<fileset dir="${spring.root}/lib/jakarta-commons">
+			<include name="commons-dbcp.jar" />
+			<include name="commons-logging.jar" />
+			<include name="commons-pool.jar" />
+		</fileset>
+		<fileset dir="${spring.root}/lib/jakarta-taglibs">
+			<include name="standard.jar" />
+		</fileset>		
+		<fileset dir="${spring.root}/lib/j2ee">
+			<include name="servlet-api.jar" />
+			<include name="jstl.jar" />
+		</fileset>
+	</path>
+	<target name="build" depends="clean,warfile">
+	</target>
+
+	<target name="clean" description="Clean output dirs (build, weblib, dist)">
+		<delete dir="${build.dir}" />
+		<delete dir="${weblib.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+
+	<target name="compile" description="编译java">
+		<mkdir dir="${build.dir}" />
+		<javac destdir="${build.dir}" srcdir="${src.dir}">
+			<compilerarg line="-encoding UTF-8" />
+			<classpath refid="project.class.path" />
+		</javac>
+		<copy todir="${build.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties" />
+				<include name="**/*.xml" />
+			</fileset>
+		</copy>
+		<mkdir dir="${weblib.dir}" />
+		<copy todir="${weblib.dir}" preservelastmodified="true">
+			<fileset dir="${spring.root}/dist">
+				<include name="spring.jar" />
+			</fileset>
+			<fileset dir="${spring.root}/lib/log4j">
+				<include name="log4j-1.2.14.jar" />
+			</fileset>
+			<fileset dir="${spring.root}/lib/jakarta-commons">
+				<include name="commons-dbcp.jar" />
+				<include name="commons-logging.jar" />
+				<include name="commons-pool.jar" />
+			</fileset>
+			<fileset dir="${spring.root}/lib/j2ee">
+				<include name="jstl.jar" />
+			</fileset>
+			<fileset dir="${spring.root}/lib/jakarta-taglibs">
+				<include name="standard.jar" />
+			</fileset>
+			<fileset dir="${jdbclib.root}">
+				<include name="mysql.jar" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="warfile" depends="compile" description="创建Web应用程序War包">
+		<mkdir dir="${dist.dir}" />
+		<war warfile="${dist.dir}/${project.name}.war" basedir="${war.dir}" webxml="${war.dir}/WEB-INF/web.xml">
+			<include name="*" />
+			<include name="images/**" />
+			<include name="WEB-INF/*.*" />
+			<include name="WEB-INF/lib/**" />
+			<include name="WEB-INF/jsp/**" />
+			<include name="WEB-INF/classes/**" />
+			<exclude name="WEB-INF/web.xml" />
+			<exclude name="**/.*" />
+		</war>
+	</target>
+
+</project>

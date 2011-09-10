@@ -1,0 +1,5 @@
+<Context path="/chapter11" reloadable="false">
+   <!-- please note that useSystemClassLoaderAsParent is available since Tomcat 5.5.20 / remove if previous versions are being used    -->
+   <Loader loaderClass="org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader" useSystemClassLoaderAsParent="false"/>
+
+</Context>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+<aop:config proxy-target-class="true">
+	    <aop:advisor advice-ref="testAdvice"  pointcut="execution(* com..*.Waiter.greetTo(..))"/>  
+		<aop:aspect ref="adviceMethods">
+			<aop:before method="preGreeting"
+				pointcut="target(com.baobaotao.NaiveWaiter) and args(name)"
+				arg-names="name" />
+			<aop:after-returning method="afterReturning"
+				pointcut="target(com.baobaotao.SmartSeller)" returning="retVal" />
+			<aop:around method="aroundMethod"
+				pointcut="execution(* serveTo(..)) and within(com.baobaotao.Waiter)" />
+			<aop:after-throwing method="afterThrowingMethod"
+				pointcut="target(com.baobaotao.SmartSeller) and execution(* checkBill(..))"
+				throwing="iae" />
+			<aop:after method="afterMethod"
+				pointcut="execution(* com..*.Waiter.greetTo(..))" />
+			<aop:declare-parents
+				implement-interface="com.baobaotao.Seller"
+				default-impl="com.baobaotao.SmartSeller"
+				types-matching="com.baobaotao.Waiter+" />
+            <aop:before method="bindParams" 
+                   pointcut="target(com.baobaotao.NaiveWaiter) and args(name,num,..)"/>
+		</aop:aspect>
+	</aop:config>
+    <bean id="testAdvice" class="com.baobaotao.schema.TestBeforeAdvice"/>
+	<bean id="adviceMethods" class="com.baobaotao.schema.AdviceMethods" />
+	<bean id="naiveWaiter" class="com.baobaotao.NaiveWaiter" />
+	<bean id="naughtyWaiter" class="com.baobaotao.NaughtyWaiter" />
+	<bean id="seller" class="com.baobaotao.SmartSeller" />
+
+
+	<!-- 事务管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource">
+		</property>
+	</bean>
+
+	<bean id="userServiceTarget"
+		class="com.baobaotao.service.UserServiceImpl">
+		<property name="userDao" ref="userDao" />
+		<property name="loginLogDao" ref="loginLogDao"></property>
+	</bean>
+	<!-- 声明性事务 -->
+	<bean id="userService"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager" ref="transactionManager" />
+		<property name="target" ref="userServiceTarget" />
+		<property name="transactionAttributes">
+			<props>
+				<prop key="findUserByUserName">
+					PROPAGATION_REQUIRED,readOnly
+				</prop>
+				<prop key="hasMatchUser">
+					PROPAGATION_REQUIRED,readOnly
+				</prop>
+				<prop key="loginSuccess">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<!-- 配置dao  -->
+	<bean id="loginLogDao"
+		class="com.baobaotao.dao.jdbc.LoginLogDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userDao" class="com.baobaotao.dao.jdbc.UserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

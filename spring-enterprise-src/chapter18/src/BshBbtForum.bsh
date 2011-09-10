@@ -1,0 +1,7 @@
+String desc;
+String getDesc() {
+  return desc;
+}
+void setDesc(String aDesc) {
+  desc = aDesc;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!--<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+		<list>
+		<value>classpath:com/baobaotao/place/car.properties</value>
+		</list>
+		</property>
+		<property name="fileEncoding" value="utf-8" />
+		</bean>-->
+
+
+	<bean
+		class="com.baobaotao.place.DecryptPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>
+					classpath:com/baobaotao/place/en_car.properties
+				</value>
+			</list>
+		</property>
+		<property name="keyLocation"
+			value="classpath:com/baobaotao/place/key.dat" />
+		<property name="fileEncoding" value="utf-8" />
+	</bean>
+	<bean id="car" class="com.baobaotao.place.Car">
+		<property name="brand" value="${brand}" />
+		<property name="maxSpeed" value="${maxSpeed}" />
+		<property name="price" value="${price}" />
+	</bean>
+</beans>

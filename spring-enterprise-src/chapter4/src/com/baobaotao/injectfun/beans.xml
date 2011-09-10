@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+  
+  <bean id="car" class="com.baobaotao.injectfun.Car" scope="prototype">
+     <property name="brand" value="红旗CA72"/>
+     <property name="price" value="2000"/>
+  </bean> 
+  <bean id="magicBoss" class="com.baobaotao.injectfun.MagicBoss">
+    <lookup-method name="getCar" bean="car"/>
+  </bean>
+  
+  <bean id="boss2" class="com.baobaotao.injectfun.Boss2"/>
+  <bean id="boss1" class="com.baobaotao.injectfun.Boss1">
+     <replaced-method name="getCar" replacer="boss2"></replaced-method>
+  </bean>
+  
+ 
+</beans>

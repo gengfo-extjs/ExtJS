@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://www.baobaotao.com" xmlns:tns="http://www.baobaotao.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://www.w3.org/2003/05/soap-envelope" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc11="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenc12="http://www.w3.org/2003/05/soap-encoding" xmlns:soap11="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://www.baobaotao.com">
+<xsd:element name="getRefinedTopicCount">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="in0" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="getRefinedTopicCountResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element maxOccurs="1" minOccurs="1" name="out" type="xsd:int"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getRefinedTopicCountRequest">
+    <wsdl:part name="parameters" element="tns:getRefinedTopicCount"/>
+  </wsdl:message>
+  <wsdl:message name="getRefinedTopicCountResponse">
+    <wsdl:part name="parameters" element="tns:getRefinedTopicCountResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="BbtForumServicePortType">
+    <wsdl:operation name="getRefinedTopicCount">
+      <wsdl:input name="getRefinedTopicCountRequest" message="tns:getRefinedTopicCountRequest"/>
+      <wsdl:output name="getRefinedTopicCountResponse" message="tns:getRefinedTopicCountResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BbtForumServiceHttpBinding" type="tns:BbtForumServicePortType">
+    <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getRefinedTopicCount">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getRefinedTopicCountRequest">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRefinedTopicCountResponse">
+        <wsdlsoap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BbtForumService">
+    <wsdl:port name="BbtForumServiceHttpPort" binding="tns:BbtForumServiceHttpBinding">
+      <wsdlsoap:address location="http://localhost:8080/baobaotao/service/BbtForumService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

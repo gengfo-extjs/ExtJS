@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Forum">
+  <typeAlias alias="forum" type="com.baobaotao.domain.Forum"/>
+  <resultMap id="result" class="forum">
+    <result property="forumId" column="forum_id"/>
+    <result property="forumName" column="forum_name"/>
+    <result property="forumDesc" column="forum_desc"/>
+  </resultMap>
+  <select id="getForum"  resultMap="result" parameterClass="int">
+    SELECT forum_id,forum_name,forum_desc
+    FROM t_forum f
+    WHERE f.forum_id = #forumId#
+  </select>
+  <select id="getForumNum"  resultClass="int">
+    SELECT COUNT(forum_id) FROM t_forum f
+  </select>
+  <select id="findForumByName" resultMap="result" parameterClass="string">
+    SELECT forum_id,forum_name,forum_desc 
+    FROM t_forum f
+    WHERE f.forum_name LIKE #forumName#
+  </select>
+  <insert id="addForum">
+    INSERT INTO t_forum(forum_name,forum_desc) 
+                VALUES(#forumName#, #forumDesc#)
+  </insert>
+  <update id="updateForum">
+    UPDATE t_forum f
+    SET forum_name=#forumName#,forum_desc＝#forumDesc#
+    WHERE f.forum_id = #forumId#
+  </update>
+</sqlMap>

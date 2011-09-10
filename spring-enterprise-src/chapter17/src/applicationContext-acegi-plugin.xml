@@ -1,0 +1,318 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!--
+		/**=channelProcessingFilter,httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,concurrentSessionFilter,filterInvocationInterceptor
+	-->
+	<bean id="filterChainProxy"
+		class="org.acegisecurity.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				CONVERT_URL_TO_UPPERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/**=channelProcessingFilter,httpSessionContextIntegrationFilter,authenticationProcessingFilter,logoutFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,concurrentSessionFilter,filterSecurityInterceptor
+			</value>
+		</property>
+	</bean>
+	<!--
+		每次request前 HttpSessionContextIntegrationFilter从Session中获取Authentication对象，在request完后
+		又把Authentication对象保存到Session中供下次request使用,此filter必须其他Acegi filter前使用
+	-->
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.acegisecurity.context.HttpSessionContextIntegrationFilter" />
+	<!--
+		和servlet spec差不多,处理登陆请求
+		authenticationFailureUrl定义登陆失败时转向的页面
+		defaultTargetUrl定义登陆成功时转向的页面
+		filterProcessesUrl定义登陆请求的页面
+		rememberMeServices用于在验证成功后添加cookie信息
+	-->
+	<bean id="authenticationProcessingFilter"
+		class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilter">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="authenticationFailureUrl"
+			value="/index.jsp?login_error=1" />
+		<property name="defaultTargetUrl" value="/main.jsp" />
+		<property name="filterProcessesUrl"
+			value="/j_acegi_security_check" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	<bean id="authenticationManager"
+		class="org.acegisecurity.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="daoAuthenticationProvider" />
+				<bean
+					class="org.acegisecurity.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="baobaotao" />
+				</bean>
+				<ref local="anonymousAuthenticationProvider" />
+			</list>
+		</property>
+		<property name="sessionController" ref="concurrentSessionController"/>
+	</bean>
+
+	<bean id="daoAuthenticationProvider"
+		class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService" />
+	</bean>
+
+
+
+	<bean id="rememberMeProcessingFilter"
+		class="org.acegisecurity.ui.rememberme.RememberMeProcessingFilter">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+
+	<bean id="rememberMeServices"
+		class="org.acegisecurity.ui.rememberme.TokenBasedRememberMeServices">
+		<property name="userDetailsService" ref="userDetailsService" />
+		<property name="tokenValiditySeconds" value="432000" />
+		<property name="key" value="baobaotao" />
+	</bean>
+
+
+	<!--
+		如果不存在任何授权信息时，自动添加匿名用户身份至SecurityContextHolder中
+	-->
+	<bean id="anonymousProcessingFilter"
+		class="org.acegisecurity.providers.anonymous.AnonymousProcessingFilter">
+		<property name="key" value="anonymousUser" />
+		<property name="userAttribute"
+			value="ANONYMOUSUSER,PRIV_ANONYMOUS" />
+	</bean>
+	<bean id="anonymousAuthenticationProvider"
+		class="org.acegisecurity.providers.anonymous.AnonymousAuthenticationProvider">
+		<property name="key" value="anonymousUser" />
+	</bean>
+
+
+
+
+	<bean id="userDetailsService"
+		class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="usersByUsernameQuery">
+			<value>
+				SELECT username,password,1 FROM t_user WHERE status='1'
+				AND username = ?
+			</value>
+		</property>
+		<property name="authoritiesByUsernameQuery">
+			<value>
+				SELECT u.username,p.priv_name FROM t_user u,t_user_priv
+				p WHERE u.user_id =p.user_id AND u.username = ?
+			</value>
+		</property>
+	</bean>
+	<bean id="passwordEncoder"
+		class="org.acegisecurity.providers.encoding.PlaintextPasswordEncoder" />
+	<bean id="userCache"
+		class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache"
+		autowire="byName">
+		<property name="cache" ref="userCacheBackend" />
+	</bean>
+
+	<bean id="userCacheBackend"
+		class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager" ref="cacheManager" />
+		<property name="cacheName" value="userCache" />
+	</bean>
+	<!-- 退出系统过滤器 -->
+	<bean id="logoutFilter"
+		class="org.acegisecurity.ui.logout.LogoutFilter">
+		<constructor-arg value="/index.jsp" />
+		<constructor-arg>
+			<list>
+				<ref bean="rememberMeServices" />
+				<bean
+					class="org.acegisecurity.ui.logout.SecurityContextLogoutHandler" />
+			</list>
+		</constructor-arg>
+		<property name="filterProcessesUrl" value="/j_acegi_logout" />
+	</bean>
+
+
+	<bean id="concurrentSessionFilter"
+		class="org.acegisecurity.concurrent.ConcurrentSessionFilter">
+		<property name="sessionRegistry" ref="sessionRegistry" />
+		<property name="expiredUrl" value="/index.jsp" />
+	</bean>
+
+	<bean id="concurrentSessionController"
+		class="org.acegisecurity.concurrent.ConcurrentSessionControllerImpl">
+		<property name="maximumSessions">
+			<value>1</value>
+		</property>
+		<property name="sessionRegistry" ref="sessionRegistry" />
+	</bean>
+	<bean id="sessionRegistry"
+		class="org.acegisecurity.concurrent.SessionRegistryImpl" />
+
+
+
+
+
+
+	<!-- 自动接收 AuthenticationEvent 信息 -->
+	<bean id="loggerListener"
+		class="org.acegisecurity.event.authentication.LoggerListener" />
+
+
+
+
+
+
+	<!-- 异常转换过滤器，主要是处理AccessDeniedException和AuthenticationException，将给每个异常找到合适的"去向"  -->
+	<bean id="exceptionTranslationFilter"
+		class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<ref local="authenticationProcessingFilterEntryPoint" />
+		</property>
+		<property name="accessDeniedHandler">
+			<bean
+				class="org.acegisecurity.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/error.jsp" />
+			</bean>
+		</property>
+	</bean>
+
+	<!-- 当AccessDeniedException且存在anonymous user时触发 -->
+	<bean id="authenticationProcessingFilterEntryPoint"
+		class="org.acegisecurity.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+		<property name="loginFormUrl">
+			<value>/index.jsp</value>
+		</property>
+		<property name="forceHttps" value="false" />
+	</bean>
+
+	<!--
+		filterSecurityInterceptor在执行转向url前检查objectDefinitionSource中设定的用户权限信息
+		过程：
+		首先，objectDefinitionSource中定义了访问URL需要的属性信息(这里的属性信息仅仅是标志，告诉accessDecisionManager要用哪些voter来投票)
+		然后，authenticationManager调用自己的provider来对用户的认证信息进行校验。
+		最后，有投票者根据用户持有认证和访问url需要的属性，调用自己的voter来投票，决定是否允许访问。
+	-->
+	<bean id="filterSecurityInterceptor"
+		class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="accessDecisionManager"
+			ref="accessDecisionManager" />
+		<property name="objectDefinitionSource">
+			<value>
+				CONVERT_URL_TO_UPPERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+
+				/updateForum.jsp=PRIV_1 /hello_1.jsp=PRIV_2
+				/**=PRIV_ANONYMOUS,PRIV_COMMON
+			</value>
+		</property>
+	</bean>
+
+	<!--
+		经过投票机制来决定是否可以访问某一资源(URL或方法)
+		allowIfAllAbstainDecisions为false时如果有一个或以上的decisionVoters投票通过,则授权通过
+		可选的决策机制：
+		ConsensusBased
+		UnanimousBased
+	-->
+	<bean id="accessDecisionManager"
+		class="org.acegisecurity.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="true" />
+		<property name="decisionVoters">
+			<list>
+				<ref bean="roleVoter" />
+			</list>
+		</property>
+	</bean>
+	<!--必须是以rolePrefix设定的value开头的才会进行投票,否则为弃权-->
+	<bean id="roleVoter" class="org.acegisecurity.vote.RoleVoter">
+		<property name="rolePrefix" value="PRIV_" />
+	</bean>
+
+
+	<!--使用ProxyFactoryBean方式
+		<bean id="methodSecurityInterceptor" class="org.acegisecurity.intercept.method.aopalliance.MethodSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="accessDecisionManager" ref="accessDecisionManager"/>
+		<property name="objectDefinitionSource">
+		<value>
+		com.baobaotao.service.BbtForum.updateForum=PRIV_2
+		</value>
+		</property>
+		</bean>
+		<bean id="bbtForum" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interceptorNames">
+		<list>
+		<idref bean="methodSecurityInterceptor"/>
+		</list>
+		</property>
+		<property name="proxyTargetClass" value="true"/>
+		<property name="target" ref="bbtForumTarget"/>
+		</bean>
+		<bean id="bbtForumTarget" class="com.baobaotao.service.BbtForum"/>-->
+
+	<bean id="methodSecurityInterceptor"
+		class="org.acegisecurity.intercept.method.aopalliance.MethodSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+		<property name="objectDefinitionSource" ref="objectDefinitionSource" />
+	</bean>
+	<bean id="objectDefinitionSource"
+		class="org.acegisecurity.intercept.method.MethodDefinitionAttributes">
+		<property name="attributes">
+			<bean class="org.acegisecurity.annotation.SecurityAnnotationAttributes" />
+		</property>
+	</bean>
+	
+	<bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	    <property name="interceptorNames">
+	        <list>
+	           <value>methodSecurityInterceptor</value>
+	        </list>
+	    </property>
+	    <property name="beanNames">
+	        <list>
+	            <value>bbtForum</value>
+	        </list>
+	    </property>
+	</bean>
+	<bean id="bbtForum" class="com.baobaotao.service.BbtForum" />
+
+	<!-- EhCache Manager -->
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>classpath:conf/ehcache.xml</value>
+		</property>
+	</bean>
+
+	<!-- HTTPS安全通道 -->
+	<bean id="channelProcessingFilter"
+		class="org.acegisecurity.securechannel.ChannelProcessingFilter">
+		<property name="channelDecisionManager" ref="channelDecisionManager"/>
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				CONVERT_URL_TO_UPPERCASE_BEFORE_COMPARISON
+				\A/index.jsp.*\Z=REQUIRES_SECURE_CHANNEL
+				\A/j_acegi_security_check.*\Z=REQUIRES_SECURE_CHANNEL
+				\A.*\Z=REQUIRES_INSECURE_CHANNEL
+			</value>
+		</property>
+	</bean>
+	<bean id="channelDecisionManager"
+		class="org.acegisecurity.securechannel.ChannelDecisionManagerImpl">
+		<property name="channelProcessors">
+			<list>
+				<bean
+					class="org.acegisecurity.securechannel.SecureChannelProcessor" />
+				<bean
+					class="org.acegisecurity.securechannel.InsecureChannelProcessor" />
+			</list>
+		</property>
+	</bean>
+	<bean class="com.baobaotao.service.LoginSuccessListener" />
+</beans>

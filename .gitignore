@@ -1,4 +1,13 @@
-target/
-dist/
+target
+dist
 *.bak
-.settings/
+.settings
+.myeclipse
+.mymetadata
+*.classpath
+*.project
+bin
+.springBeans
+classes
+*.jar
+*.war

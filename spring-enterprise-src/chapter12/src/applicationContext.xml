@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+         http://www.springframework.org/schema/util 
+http://www.springframework.org/schema/util/spring-util-2.0.xsd
+http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+         ">
+	<!-- 引入Dao定义:基于HibernateTemplate 	-->
+	<import resource="applicationContext-hbt-dao.xml" />
+
+	<!-- 引入Dao定义:基于原生Hibernate  API
+	<import resource="applicationContext-hbt-raw-dao.xml" />
+	-->	
+	<!-- 引入Dao定义:基于Ibatis SqlMapClientTemplate
+	<import resource="applicationContext-ibatis-dao.xml" />
+	-->
+			
+	<bean id="bbtForum"
+		class="com.baobaotao.service.impl.BbtForumImpl">
+		<property name="forumDao" ref="forumDao" />
+		<property name="topicDao" ref="topicDao" />
+		<property name="postDao" ref="postDao" />
+	</bean>
+	<!-- Hibernate的事务管理器
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	 -->
+	 <!-- Ibatis的事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+</beans>

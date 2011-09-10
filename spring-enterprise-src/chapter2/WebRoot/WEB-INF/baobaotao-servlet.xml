@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+     <bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix">
+			<value>/WEB-INF/jsp/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+           <props>
+              <prop key="/loginController.html">loginController</prop>
+              <prop key="/index.html">loginPage</prop>
+           </props>
+        </property>
+    </bean>
+
+	<bean name="loginController"
+		class="com.baobaotao.web.LoginController">
+		<property name="userService" ref="userService"></property>
+	</bean>
+
+	
+	<bean name="loginPage"
+		class="com.baobaotao.web.LoginPage">
+	</bean>	
+
+</beans>

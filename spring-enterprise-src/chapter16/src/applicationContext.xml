@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!--引入XFire的预配置文件-->
+	<import resource="classpath:org/codehaus/xfire/spring/xfire.xml" />
+	<bean id="bbtForum" class="com.baobaotao.service.BbtForum" />
+
+	<!-- 使用导出器导出Web Service
+		<bean id="BbtForumService" class="org.codehaus.xfire.spring.remoting.XFireExporter">
+		<property name="serviceFactory" ref="xfire.serviceFactory" />
+		<property name="xfire" ref="xfire" />
+		<property name="serviceBean" ref="bbtForum" />
+		<property name="serviceClass"
+		value="com.baobaotao.xfire.server.BbtForumService" />
+		</bean>
+	-->
+
+
+
+	<!-- 获得applicationContext中所有bean的JSR181 annotation -->
+	<bean id="webAnnotations"
+		class="org.codehaus.xfire.annotations.jsr181.Jsr181WebAnnotations" />
+	<bean id="jsr181HandlerMapping"
+		class="org.codehaus.xfire.spring.remoting.Jsr181HandlerMapping">
+		<property name="xfire" ref="xfire" />
+		<property name="webAnnotations" ref="webAnnotations" />
+	</bean>
+</beans>

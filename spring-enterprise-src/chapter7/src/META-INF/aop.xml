@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<aspectj>
+	<!-- 使用AspectJ类加载期织入测试的配置 -->
+	<!-- 
+		<aspects>
+		<aspect name="com.baobaotao.configure.TopicAspectj" />
+		</aspects>
+		<weaver
+		options="-showWeaveInfo -XmessageHandlerClass:org.springframework.aop.aspectj.AspectJWeaverMessageHandler">
+		<include within="com.baobaotao..*" />
+		</weaver>
+	-->
+	<!-- @Configure的测试配置 -->
+
+	<aspects>
+		<aspect
+			name="org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect" />
+	    </aspects>
+	<weaver
+		options="-showWeaveInfo -XmessageHandlerClass:org.springframework.aop.aspectj.AspectJWeaverMessageHandler">
+		<include within="com.baobaotao.configure..*" />
+	</weaver>
+</aspectj>

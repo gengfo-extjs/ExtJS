@@ -1,0 +1,35 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>gengfo.test</groupId>
+	<artifactId>spring-enterprise-ch19</artifactId>
+	<packaging>pom</packaging>
+	<name>spring-enterprise-ch19</name>
+	<version>0.1</version>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>3.0.5.RELEASE</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<build>
+	<sourceDirectory>src</sourceDirectory>
+    <scriptSourceDirectory>scripts</scriptSourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    <outputDirectory>D:\GengFo\MyProgs\spring-enterprise-src\chapter19\target\classes</outputDirectory>
+    <testOutputDirectory>D:\GengFo\MyProgs\spring-enterprise-src\chapter19\target\test-classes</testOutputDirectory>
+    <resources>
+      <resource>
+        <directory>D:\GengFo\MyProgs\spring-enterprise-src\chapter19\src\main\resources</directory>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>D:\GengFo\MyProgs\spring-enterprise-src\chapter19\src\test\resources</directory>
+      </testResource>
+    </testResources>
+	</build>
+</project>

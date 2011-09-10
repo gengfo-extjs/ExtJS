@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+     http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+   <bean id="target" class="com.baobaotao.advice.NaiveWaiter"/>
+   <bean id="greetingBefore" class="com.baobaotao.advice.GreetingBeforeAdvice"/>
+   <bean id="greetingAfter" class="com.baobaotao.advice.GreetingAfterAdvice"/>
+     <!-- 
+   <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean">
+      <property name="proxyInterfaces">
+        <value>com.baobaotao.advice.Waiter</value>
+      </property>
+      <property name="interceptorNames">
+         <list>
+            <idref local="greetingBefore"/>
+            <idref local="greetingAfter"/>
+         </list>
+      </property>
+      <property name="target" ref="target"/>
+   </bean>
+   -->
+
+   <bean id="greetingAround" class="com.baobaotao.advice.GreetingInterceptor"/>
+   <bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean">
+      <property name="proxyInterfaces">
+        <value>com.baobaotao.advice.Waiter</value>
+      </property>
+      <property name="interceptorNames">
+         <list>
+            <value>greetingAround</value>
+         </list>
+      </property>
+      <property name="target" ref="target"/>
+   </bean>  
+   
+   <!-- 异常抛出增强  -->
+   <bean id="forumServiceTarget" class="com.baobaotao.advice.ForumService"/>
+   <bean id="transactionManager" class="com.baobaotao.advice.TransactionManager"/>
+   <bean id="forumService" class="org.springframework.aop.framework.ProxyFactoryBean">
+      <property name="interceptorNames">
+         <list>
+            <value>transactionManager</value>
+         </list>
+      </property>
+      <property name="target" ref="forumServiceTarget"/>
+      <property name="proxyTargetClass" value="true"/>
+   </bean> 
+      
+</beans>

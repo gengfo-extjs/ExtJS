@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd">
+	<lang:jruby id="bbtForum1" refresh-check-delay="30000"
+		script-interfaces="com.baobaotao.service.BbtForum"
+		script-source="classpath:RubyBbtForum.rb">
+		<lang:property name="desc"
+			value="This is a baby's Forum(jruby)" />
+	</lang:jruby>
+	<lang:groovy id="bbtForum2"
+		script-source="classpath:GroovyBbtForum.groovy">
+		<lang:property name="desc"
+			value="This is a baby's Forum(groovy)" />
+	</lang:groovy>
+	<lang:bsh id="bbtForum3" script-source="classpath:BshBbtForum.bsh"
+		script-interfaces="com.baobaotao.service.BbtForum">
+		<lang:property name="desc" value="This is a baby's Forum(bsh)" />
+	</lang:bsh>
+
+	<lang:jruby id="bbtForum4"
+		script-interfaces="com.baobaotao.service.BbtForum">
+		
+		<lang:inline-script>
+			<![CDATA[
+			require 'java'
+			include_class 'com.baobaotao.service.BbtForum'
+			class RubyBbtForum < BbtForum
+			  def setDesc(desc)
+			    @@desc = desc
+			  end
+			  def getDesc
+			    @@desc;
+			  end
+			end
+			RubyBbtForum.new	 
+		 ]]>
+		</lang:inline-script>
+		<lang:property name="desc"
+			value="This is a baby's Forum(jruby)" />
+	</lang:jruby>
+</beans>

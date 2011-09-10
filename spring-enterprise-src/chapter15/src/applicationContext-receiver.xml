@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+         http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="connectionFactory"
+		class="org.apache.activemq.pool.PooledConnectionFactory">
+		<property name="connectionFactory">
+			<bean
+				class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL">
+					<value>tcp://localhost:61616</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="dest" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg value="myDest" />
+	</bean>
+	<bean id="jmsTemplate"
+		class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="defaultDestination" ref="dest" />
+	</bean>
+	<bean id="messageReceiver"
+		class="com.baobaotao.jms.MessageReceiver">
+		<property name="jmsTemplate" ref="jmsTemplate" />
+	</bean>
+
+	<bean id="messageListener"
+		class="com.baobaotao.jms.SimpleMessageListener" />
+
+	<bean id="mailService" class="com.baobaotao.service.MailService" />
+	<bean id="userMsgListener"
+		class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
+		<constructor-arg ref="mailService" />
+		<property name="defaultListenerMethod" value="sendMail" />
+	</bean>
+	<bean id="listenerContainer"
+		class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destinationName" value="userMsgQ" />
+		<property name="messageListener" ref="userMsgListener" />
+		<property name="idleTaskExecutionLimit" value="2" />
+		<property name="maxConcurrentConsumers" value="10" />
+		<property name="messageSelector" value="level%2=0" />
+		<property name="transactionManager" ref="transactionManager"/>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.jms.connection.JmsTransactionManager">
+		<property name="connectionFactory" ref="connectionFactory" />
+	</bean>
+
+</beans>

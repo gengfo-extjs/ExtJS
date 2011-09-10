@@ -1,0 +1,10 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soap:Body>
+		<getRefinedTopicCount
+			xmlns="http://server.xfire.baobaotao.com">
+			<in0 xmlns="http://server.xfire.baobaotao.com">20</in0>
+		</getRefinedTopicCount>
+	</soap:Body>
+</soap:Envelope>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+	version="1.0">
+
+	<!-- 持久化单元级别的元数据 -->
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete />
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	
+
+	<!-- 映射文件级别的元数据 -->
+	<package>com.baobaotao.domain</package>
+
+		<!-- 实体对象映射 	-->
+	<entity class="Topic">
+		<table name="T_TOPIC" />
+		<inheritance strategy="SINGLE_TABLE" />
+		<discriminator-value>1</discriminator-value>
+		<discriminator-column name="TOPIC_TYPE"
+			discriminator-type="INTEGER" length="1" />
+		<attributes>
+			<id name="topicId">
+				<column name="TOPIC_ID"/>
+				<generated-value strategy="TABLE" />
+			</id>
+			<basic name="topicTitle">
+				<column name="TOPIC_TITLE" length="30" />
+			</basic>
+			<basic name="topicTime">
+				<column name="TOPIC_TIME" />
+				<temporal>DATE</temporal>
+			</basic>
+			<basic name="topicViews">
+				<column name="TOPIC_VIEWS" />
+			</basic>
+		</attributes>
+	</entity>
+
+	<entity class="PollTopic">
+		<discriminator-value>2</discriminator-value>
+		<attributes>
+			<basic name="maxChoices">
+				<column name="MAX_CHOICES" />
+			</basic>
+			<basic name="multiple">
+				<column name="multiple" />
+			</basic>
+			<one-to-many name="options" mapped-by="pollTopic">
+				<cascade>
+					<cascade-all/>
+				</cascade>
+			</one-to-many>
+		</attributes>
+	</entity>
+
+	<entity class="PollOption">
+	    <table name="T_POLL_OPTION" />
+		<attributes>
+			<id name="optionId">
+				<column name="OPTION_ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<basic name="optionItem">
+			   <column name="OPTION_ITEM"/>
+			</basic>
+			<many-to-one name="pollTopic" >
+			   <join-column name="TOPIC_ID" nullable="false"/>
+			</many-to-one>
+		</attributes>
+	</entity>
+	<entity class="Post">
+	    <table name="T_POST" />
+		<attributes>
+			<id name="postId">
+				<column name="POST_ID" />
+				<generated-value strategy="TABLE" />
+			</id>
+			<basic name="postText" fetch="EAGER">
+			   <column name="POST_TEXT" column-definition="LONGTEXT NOT NULL"/>
+			   <lob/>
+			</basic>
+			<basic name="postAttach" fetch="LAZY">
+			   <column name="POST_ATTACH" column-definition="BLOB"/>
+			   <lob/>
+			</basic>
+		</attributes>
+	</entity>
+</entity-mappings>

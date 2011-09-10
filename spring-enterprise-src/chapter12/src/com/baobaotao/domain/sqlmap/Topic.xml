@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="Topic">
+  <typeAlias alias="topic" type="com.baobaotao.domain.Topic"/>
+  <insert id="addTopic">
+    INSERT INTO t_forum(forum_id,topic_title,user_id,topic_time,topic_views,topic_replies) 
+    VALUES(#forum.forumId#, #topicTitle#,#userId#,#topicTime#,#topicViews#,#topicReplies#)
+  </insert>
+</sqlMap>

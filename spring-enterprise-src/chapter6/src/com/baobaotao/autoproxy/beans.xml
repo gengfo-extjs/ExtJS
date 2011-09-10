@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="waiter" class="com.baobaotao.advisor.Waiter" />
+	<bean id="seller" class="com.baobaotao.advisor.Seller" />
+	<bean id="greetingAdvice" class="com.baobaotao.advisor.GreetingBeforeAdvice" />
+    <!-- 通过Bean名称自动创建代理 -->
+    <!-- 
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+      <property name="beanNames" value="*er"/>
+      <property name="interceptorNames">
+          <idref local="greetingAdvice"/>
+      </property>
+      <property name="optimize" value="true"/>
+    </bean>
+     -->
+    
+   <!--通过Advisor自动创建代理-->
+	<bean id="regexpAdvisor"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="patterns">
+			<list>
+				<value>.*greet.*</value>
+			</list>
+		</property>
+		<property name="advice" ref="greetingAdvice" />
+	</bean>
+   <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+</beans>
