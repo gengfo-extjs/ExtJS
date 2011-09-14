@@ -25,7 +25,9 @@ public class Test {
 	@Transactional(isolation=Isolation.READ_COMMITTED,propagation=Propagation.REQUIRED,readOnly=true,timeout=123,
 			rollbackFor={DataAccessException.class,DataAccessException.class})
 	public void service(){
-		var d = 
+		
+		
+		
 		
 	}
 }

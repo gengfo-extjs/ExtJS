@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 public class TopicDao {
 	private static ThreadLocal<Connection> connThreadLocal = new ThreadLocal<Connection>();
@@ -12,6 +13,11 @@ public class TopicDao {
 		}
 	}
 	public void addTopic() {
-		Statement stat = getConnection().createStatement();
+		try {
+			Statement stat = getConnection().createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
