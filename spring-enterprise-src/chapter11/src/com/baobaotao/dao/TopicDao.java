@@ -6,7 +6,10 @@ import com.baobaotao.domain.Topic;
 
 public interface TopicDao {
 	void addTopic(Topic topic);
+
 	Topic getTopic(int topicId);
+
 	List<Topic> findTopicByUserId(int userId);
+
 	void test();
 }

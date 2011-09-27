@@ -29,7 +29,7 @@ public class SequenceNumber {
 		}
 		public void run()
 		{
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i < 300; i++) {
 				System.out.println("thread["+Thread.currentThread().getName()+"] sn["+sn.getNextNum()+"]");				
 			}
 		}
