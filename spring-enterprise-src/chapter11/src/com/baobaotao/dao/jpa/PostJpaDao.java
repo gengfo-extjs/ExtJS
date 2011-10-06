@@ -1,6 +1,9 @@
 package com.baobaotao.dao.jpa;
 
-import javax.management.Query;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceException;
+import javax.persistence.Query;
 
 import org.springframework.orm.jpa.JpaCallback;
 import org.springframework.orm.jpa.support.JpaDaoSupport;
@@ -16,9 +19,9 @@ public class PostJpaDao extends JpaDaoSupport implements PostDao {
 
 	public byte[] getAttach(final int postId) {
 		Object obj = getJpaTemplate().execute(
-				
-				new JpaCallback() {
-			
+
+		new JpaCallback() {
+
 			public Object doInJpa(EntityManager em) throws PersistenceException {
 				Query query = em
 						.createQuery("SELECT post.postAttach FROM Post post WHERE post.postId=:postId");
@@ -26,7 +29,7 @@ public class PostJpaDao extends JpaDaoSupport implements PostDao {
 				return query.getSingleResult();
 			}
 		}
-				
+
 		);
 		return (byte[]) obj;
 	}
