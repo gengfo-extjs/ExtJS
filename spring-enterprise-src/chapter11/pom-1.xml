@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>gengfo.test</groupId>
-	<artifactId>spring-ent-chapter9</artifactId>
+	<artifactId>spring-ent-chapter11</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>spring-ent-chapter9</name>
+	<name>spring-ent-chapter11</name>
 	<url>http://maven.apache.org</url>
 
 	<build>
@@ -25,7 +25,7 @@
 			</testResource>
 		</testResources>
 		<directory>target</directory>
-		<finalName>spring-ent-chapter9</finalName>
+		<finalName>spring-ent-chapter11</finalName>
 	</build>
 	<dependencies>
 		<dependency>

@@ -22,9 +22,11 @@ public class TestForumService extends AbstractDependencyInjectionSpringContextTe
 	
 	public void testAddForum() {
 		Forum forum = new Forum();
-		forum.setForumDesc("desc");
-		forum.setForumName("name");
+
+		forum.setForumDesc("desc1");
+		forum.setForumName("name1");
 		forumService1.addForum(forum);
+		
 	}
 	
 	public void setForumService1(ForumService1 forumService1) {

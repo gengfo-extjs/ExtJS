@@ -4,15 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.sql.Statement;
 
-import org.springframework.jdbc.core.BatchPreparedStatementSetter;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowCallbackHandler;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
@@ -27,7 +22,7 @@ public class ForumJdbcDao extends JdbcDaoSupport implements ForumDao {
 		getJdbcTemplate().update(new PreparedStatementCreator() {
 			public PreparedStatement createPreparedStatement(Connection conn)
 					throws SQLException {
-				PreparedStatement ps = conn.prepareStatement(sql);
+				PreparedStatement ps = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 				ps.setString(1, forum.getForumName());
 				ps.setString(2, forum.getForumDesc());
 				return ps;

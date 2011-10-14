@@ -4,9 +4,9 @@
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="
-    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
-    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
-    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
 	<import resource="classpath:applicationContext-dao.xml" />
 	<bean id="bbtForum"
 		class="com.baobaotao.service.impl.BbtForumImpl">
@@ -26,10 +26,10 @@
 			advice-ref="txAdvice" />
 	</aop:config>
 	<tx:advice id="txAdvice" >
-        <tx:attributes> 
-            <tx:method name="get*" read-only="false"/>
-            <tx:method name="add*" rollback-for="PessimisticLockingFailureException"/>
-            <tx:method name="update*"/>         
-        </tx:attributes>
-    </tx:advice>
+		<tx:attributes> 
+			<tx:method name="get*" read-only="false"/>
+			<tx:method name="add*" rollback-for="PessimisticLockingFailureException"/>
+			<tx:method name="update*"/>         
+		</tx:attributes>
+	</tx:advice>
 </beans>

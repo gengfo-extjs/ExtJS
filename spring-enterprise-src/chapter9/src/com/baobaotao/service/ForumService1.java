@@ -11,6 +11,15 @@ import com.baobaotao.domain.Forum;
 public class ForumService1 {
 	private ForumDao forumDao;
 	TransactionTemplate template;
+	public TransactionTemplate getTemplate() {
+		return template;
+	}
+	public void setTemplate(TransactionTemplate template) {
+		this.template = template;
+	}
+	public ForumDao getForumDao() {
+		return forumDao;
+	}
 	public void addForum(final Forum forum) {
 		
 		template.execute(new TransactionCallbackWithoutResult() {
