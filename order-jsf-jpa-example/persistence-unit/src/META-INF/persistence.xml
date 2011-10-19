@@ -1,0 +1,17 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence persistence_1_0.xsd" version="1.0">
+    <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+        <provider>
+           oracle.toplink.essentials.PersistenceProvider
+        </provider>
+        <class>oracle.toplink.jpa.example.inventory.model.Inventory</class>
+        <class>oracle.toplink.jpa.example.inventory.model.Order</class>
+        <class>oracle.toplink.jpa.example.inventory.model.Item</class>
+        <properties>
+            <property name="toplink.logging.level" value="FINE"/>
+            <property name="toplink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>  <!-- update to match database-->
+            <property name="toplink.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/> <!-- update to match database-->
+            <property name="toplink.jdbc.password" value="tiger"/> <!-- update to match database-->
+            <property name="toplink.jdbc.user" value="scott"/> <!-- update to match database-->
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,0 +1,132 @@
+<project name="Compile and Build Tasks for TopLink JPA Example" default="all"  basedir=".">
+    <!-- =================================================================== -->
+
+    <target name="all" depends="clean, package.webapp"/>
+
+    <!-- =================================================================== -->
+    <!--   Build Properties                                                  -->
+    <!-- =================================================================== -->
+    <target name="init" >
+        <property file="build.properties"/>
+        <property name="pu.build.dir" value="./persistence-unit/classes"/>
+        <property name="pu.src.dir" value="./persistence-unit/src"/>
+		<property name="pu.deploy.dir" value="./persistence-unit/deploy"/>
+		<property name="extras.src.dir" value="./extras/src"/>
+		<property name="extras.build.dir" value="./extras/classes"/>
+		<property name="webapp.src.dir" value="./web-application/src"/>
+		<property name="webapp.html.dir" value="./web-application/public_html"/>
+		<property name="webapp.build.dir" value="./web-application/classes"/>
+		<property name="webapp.deploy.dir" value="./web-application/deploy"/>
+		<property name="lib.dir" value="./lib"/>
+	    <path id="compile.classpath">
+			<fileset dir="${lib.dir}">
+				<include name="**/*.jar"/>
+			</fileset>
+		</path>
+
+
+	</target>
+
+    <!-- =================================================================== -->
+    <!--  CLEAN                                                              -->
+    <!-- =================================================================== -->
+    <target name="clean" depends="init">
+		<delete includeemptydirs="true">
+			<fileset dir="${pu.build.dir}" includes="**/*"/>
+			<fileset dir="${pu.deploy.dir}" includes="**/*"/>
+			<fileset dir="${webapp.build.dir}" includes="**/*"/>
+			<fileset dir="${webapp.deploy.dir}" includes="**/*"/>
+			<fileset dir="${extras.build.dir}" includes="**/*"/>
+		</delete>
+    </target>
+
+    <!-- =================================================================== -->
+    <!-- package the persistence unit into a jar                             -->
+    <!-- =================================================================== -->
+    <target name="package.persistence-unit" depends="init">
+        <javac
+			srcdir="${pu.src.dir}"
+            destdir="${pu.build.dir}"
+            includes="**/*.java">
+			<classpath>
+		       <path refid="compile.classpath"/>
+		   </classpath>
+	   </javac>
+        <jar jarfile="${pu.deploy.dir}/persistence-unit.jar">
+            <fileset
+                dir="${pu.build.dir}"
+                includes="**"
+            />
+			<metainf dir="${pu.src.dir}/META-INF"/>
+        </jar>
+    </target>
+
+
+    <!-- =================================================================== -->
+    <!-- package the webapp into a war                                       -->
+    <!-- =================================================================== -->
+    <target name="package.webapp" depends="init, package.persistence-unit">
+        <javac
+            classpath="${compile.classpath}"
+            srcdir="${webapp.src.dir}"
+            destdir="${webapp.build.dir}"
+            includes="**/*.java">
+			<classpath>
+		       <path refid="compile.classpath"/>
+		       <pathelement location="${pu.deploy.dir}/persistence-unit.jar"/>
+		   </classpath>
+	   </javac>
+		<!-- copies over the WEB-INF directory -->
+        <war 
+			destfile="${webapp.deploy.dir}/jpa-example.war"
+			webxml="${webapp.html.dir}/WEB-INF/web.xml">
+			<classes dir="${webapp.build.dir}"/>
+			<fileset dir="${webapp.html.dir}">
+				    <exclude name="**/web.xml"/>
+			</fileset>
+			<lib dir="${lib.dir}"/>
+			<lib dir="${pu.deploy.dir}"/>
+		</war>
+    </target>
+
+    <!-- =================================================================== -->
+    <!-- compile extras                             -->
+    <!-- =================================================================== -->
+    <target name="compile.extras" depends="init">
+        <javac
+			srcdir="${extras.src.dir}"
+            destdir="${extras.build.dir}"
+            includes="**/*.java">
+			<classpath>
+		       <path refid="compile.classpath"/>
+		       <pathelement location="${pu.deploy.dir}/persistence-unit.jar"/>
+		   </classpath>
+	   </javac>
+    </target>
+
+    <!-- =================================================================== -->
+    <!-- Generate schema on database                                         -->
+    <!-- =================================================================== -->
+    <target name="generate-tables" depends="init, package.persistence-unit, compile.extras">
+		<java classname="oracle.toplink.jpa.example.inventory.tools.DDLGenerator" fork="yes" >
+			<classpath>
+		       <path refid="compile.classpath"/>
+		       <pathelement location="${pu.deploy.dir}/persistence-unit.jar"/>
+		       <pathelement location="${extras.build.dir}"/>
+		   </classpath>
+	    </java>
+    </target>
+
+    <!-- =================================================================== -->
+    <!-- populate data on database                                         -->
+    <!-- =================================================================== -->
+    <target name="populate-data" depends="init, package.persistence-unit, compile.extras">
+		<java classname="oracle.toplink.jpa.example.inventory.tools.Populator" fork="yes" >
+			<classpath>
+		       <path refid="compile.classpath"/>
+		       <pathelement location="${pu.deploy.dir}/persistence-unit.jar"/>
+		       <pathelement location="${extras.build.dir}"/>
+		   </classpath>
+	    </java>
+    </target>
+</project>
