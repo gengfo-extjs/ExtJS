@@ -1,8 +1,17 @@
 ---------------------------
-b**t**1***1**
+gengfo.extjs@gmail.com b**t**1***1**
+github.com  https://github.com/gengfo-extjs b**t**1***1**
+pub key in 金山快盘  github.rar C:\Documents and Settings\Administrator\.ssh
 git clone git@github.com:gengfo-extjs/ExtJS.git
-pub key in 金山快盘
----------------------------
+---------------------------git command ref--------------------------------------------
+git clone git@github.com:gengfo-extjs/ExtJS.git
+--------------------------------------------------------------------------------------
+
+
+
+20111014-星期五
+整理git hub 项目，并合并到一个repository
+
 
 20111006-星期四
 加入sia3-code，是spring in action 3 的源代码
