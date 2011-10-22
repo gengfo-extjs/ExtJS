@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<project name="OOCL ARP Build File for DEV Env" default="runwlst" basedir=".">
+<project name="OOCL ARP Build File for DEV Env" default="create-ipsdev-data-source" basedir=".">
 
 	<target name="init">
 	
@@ -12,7 +12,7 @@
          
 	</target>
 
-	<target name="runwlst">
+	<target name="create-ipsdev-data-source">
 		<wlst	fileName="Script1319289398625.py"
 			executeScriptBeforeFile="true"
 			debug="false" 

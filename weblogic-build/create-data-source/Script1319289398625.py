@@ -37,4 +37,4 @@ set('Targets',jarray.array([ObjectName('com.bea:Name=myserver,Type=Server')], Ob
 
 activate()
 
-startEdit()
+exit()
