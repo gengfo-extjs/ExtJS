@@ -18,10 +18,22 @@
 			debug="false" 
 			failOnError="false">
 			<script>
-				connect('weblogic','bzmtck1204119','t3://localhost:7001')
+				connect('weblogic','******','t3://localhost:7001')
 			</script>
 		</wlst>
 	</target>
+	
+	<target name="set-log-level">
+		<wlst	fileName="Script1319291025328.py"
+			executeScriptBeforeFile="true"
+			debug="false" 
+			failOnError="false">
+			<script>
+				connect('weblogic','******','t3://localhost:7001')
+			</script>
+		</wlst>
+	</target>
+	
 
 </project>
 
