@@ -11,3 +11,4 @@ bin
 classes
 *.jar
 *.war
+*.zip

@@ -8,6 +8,9 @@ git clone git@github.com:gengfo-extjs/ExtJS.git
 --------------------------------------------------------------------------------------
 
 
+压缩git 包
+git archive master | zip > project.zip
+
 
 20111014-星期五
 整理git hub 项目，并合并到一个repository
