@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="1.1" xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.eclipse.org/eclipselink/xsds/persistence/orm http://www.eclipse.org/eclipselink/xsds/eclipselink_orm_1_1.xsd">
+	<persistence-unit-metadata>
+		<persistence-unit-defaults>
+			<access>FIELD</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<entity class="gridcache.xml.model.Address">
+		<customizer class="oracle.eclipselink.coherence.integrated.config.GridCacheCustomizer"/>
+		<table name="TLG_XML_GC_ADDRESS">
+		</table>
+		<attributes>
+			<id name="id">
+				<generated-value />
+			</id>
+			<version name="version">
+			</version>
+		</attributes>
+	</entity>
+	<entity class="gridcache.xml.model.Employee">
+		<customizer class="oracle.eclipselink.coherence.integrated.config.GridCacheCustomizer"/>
+		<table name="TLG_XML_GC__EMPLOYEE">
+		</table>
+		<named-query name="Employee.findByLastNameLike">
+			<query>SELECT e FROM Employee e WHERE e.lastName LIKE :lastName</query>
+		</named-query>
+		<attributes>
+			<id name="id">
+				<generated-value />
+			</id>
+			<version name="version">
+			</version>
+			<one-to-many name="phoneNumbers" mapped-by="owner">
+				<cascade>
+					<cascade-all />
+				</cascade>
+			</one-to-many>
+			<one-to-one name="address" fetch="LAZY">
+				<cascade>
+					<cascade-all />
+				</cascade>
+			</one-to-one>
+		</attributes>
+	</entity>
+	<entity class="gridcache.xml.model.PhoneNumber">
+		<customizer class="oracle.eclipselink.coherence.integrated.config.GridCacheCustomizer"/>
+		<table name="TLG_XML_GC__PHONE">
+		</table>
+		<attributes>
+			<id name="id">
+				<generated-value />
+			</id>
+			<basic name="number">
+				<column name="NUM"/>
+			</basic>
+			<version name="version">
+			</version>
+			<many-to-one name="owner" fetch="LAZY">
+			</many-to-one>
+		</attributes>
+	</entity>
+</entity-mappings>

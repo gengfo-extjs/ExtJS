@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE cache-config SYSTEM "cache-config.dtd">
+
+<cache-config>
+	<caching-scheme-mapping>
+		<cache-mapping>
+			<cache-name>*</cache-name>
+			<scheme-name>eclipselink-distributed-readonly</scheme-name>
+		</cache-mapping>
+	</caching-scheme-mapping>
+	<caching-schemes>
+		<distributed-scheme>
+			<scheme-name>eclipselink-distributed-readonly</scheme-name>
+			<service-name>EclipseLinkJPAReadOnly</service-name>
+			<!--
+				Configure a wrapper serializer to support serialization of
+				relationships.
+			-->
+			<serializer>
+				<class-name>oracle.eclipselink.coherence.integrated.cache.WrapperSerializer
+				</class-name>
+			</serializer>
+			<backing-map-scheme>
+				<local-scheme>
+					<scheme-ref>unlimited-backing-map</scheme-ref>
+				</local-scheme>
+			</backing-map-scheme>
+			<autostart>true</autostart>
+		</distributed-scheme>
+		<local-scheme>
+			<scheme-name>unlimited-backing-map</scheme-name>
+		</local-scheme>
+	</caching-schemes>
+</cache-config>
