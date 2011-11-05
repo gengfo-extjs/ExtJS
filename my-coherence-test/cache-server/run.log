@@ -1,0 +1,2 @@
+
+D:\GengFo\GitRoot\ExtJS\my-coherence-test\cache-server>java -cp D:\GengFo\GitRoot\ExtJS\my-coherence-test\config;D:\GengFo\lib-refs\coherence\3.7.1.0b27797\coherence.jar com.tangosol.net.DefaultCacheServer 

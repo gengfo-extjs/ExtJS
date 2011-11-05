@@ -16,8 +16,8 @@
 			<!-- Default Login using Oracle for EclipseLink's internal connection pool -->
 			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE" />
-			<property name="javax.persistence.jdbc.user" value="scott" />
-			<property name="javax.persistence.jdbc.password" value="tiger" />
+			<property name="javax.persistence.jdbc.user" value="hr" />
+			<property name="javax.persistence.jdbc.password" value="oocl123456" />
 			<!-- Minimal connections in internal pool -->
 			<property name="eclipselink.jdbc.read-connections.min" value="1" />
 			<property name="eclipselink.jdbc.write-connections.min" value="1" />

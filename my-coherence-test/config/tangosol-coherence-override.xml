@@ -1,0 +1,29 @@
+<?xml version='1.0'?>
+<coherence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/coherence/coherence-operational-config" xsi:schemaLocation="http://xmlns.oracle.com/coherence/ coherence-operational-config coherence-operational-config.xsd">
+	<cluster-config>
+		<member-identity>
+			<cluster-name>gengfo-cluster</cluster-name>
+		</member-identity>
+
+		<multicast-listener>
+			<address>224.3.6.0</address>
+			<port>8100</port>
+			<time-to-live>0</time-to-live>
+		</multicast-listener>
+	</cluster-config>
+	
+	<configurable-cache-factory-config>
+		<init-params>
+			<init-param>
+				<param-type>java.lang.String</param-type>
+				<param-value system-property="tangosol.coherence.cacheconfig">example-config.xml</param-value>
+			</init-param>
+		</init-params>
+	</configurable-cache-factory-config>
+	
+	<logging-config>
+		<severity-level system-property="tangosol.coherence.log.level">5</severity-level>
+		<destination system-property="tangosol.coherence.log">log4j</destination>
+		<message-format>[{date}] &lt;{level}&gt; (thread={thread}) -->{text}</message-format>
+	</logging-config>
+</coherence>
