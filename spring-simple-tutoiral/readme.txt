@@ -1,0 +1,1 @@
+1. workspace naming: ws-spring-simple-tutorial
