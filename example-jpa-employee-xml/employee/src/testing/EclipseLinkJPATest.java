@@ -31,7 +31,7 @@ public abstract class EclipseLinkJPATest {
 	 */
 	private static EntityManagerFactory emf;
 
-	protected EntityManagerFactory getEMF() {
+	public EntityManagerFactory getEMF() {
 		if (emf == null) {
 			emf = createEMF();
 		}
