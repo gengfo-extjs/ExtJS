@@ -1,79 +1,22 @@
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:08:51,796 - Done
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:10:02,796 - class model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:10:02,796 - class model.SmallProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:10:02,796 - class model.LargeProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:10:02,796 - class model.Address
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:10:02,796 - class model.Employee
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:10:02,812 - class model.PhoneNumber
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:02,359 - getBindableJavaType() -> class model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:02,359 - getBindableJavaType() -> class model.SmallProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:02,359 - getBindableJavaType() -> class model.LargeProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:02,359 - getBindableJavaType() -> class model.Address
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:02,359 - getBindableJavaType() -> class model.Employee
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:02,359 - getBindableJavaType() -> class model.PhoneNumber
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:37,687 - getBindableJavaType() -> model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:37,687 - getBindableJavaType() -> model.SmallProject
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:37,703 - getBindableJavaType() -> model.LargeProject
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:37,703 - getBindableJavaType() -> model.Address
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:37,703 - getBindableJavaType() -> model.Employee
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:11:37,703 - getBindableJavaType() -> model.PhoneNumber
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableJavaType() -> model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableJavaType() -> model.SmallProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableJavaType() -> model.LargeProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableJavaType() -> model.Address
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableJavaType() -> model.Employee
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableJavaType() -> model.PhoneNumber
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:22,000 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,203 - getBindableJavaType() -> model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,203 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableJavaType() -> model.SmallProject
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableJavaType() -> model.LargeProject
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableJavaType() -> model.Address
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableJavaType() -> model.Employee
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableJavaType() -> model.PhoneNumber
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:12:57,218 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,937 - getBindableJavaType() -> model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,937 - getBindableType() -> ENTITY_TYPE
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getIdType() -> BasicTypeImpl@32048085:Integer [ javaType: class java.lang.Integer]
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableJavaType() -> model.SmallProject
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableType() -> ENTITY_TYPE
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getIdType() -> BasicTypeImpl@32048085:Integer [ javaType: class java.lang.Integer]
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableJavaType() -> model.LargeProject
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableType() -> ENTITY_TYPE
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getIdType() -> BasicTypeImpl@32048085:Integer [ javaType: class java.lang.Integer]
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableJavaType() -> model.Address
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableType() -> ENTITY_TYPE
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getIdType() -> BasicTypeImpl@32048085:Integer [ javaType: class java.lang.Integer]
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableJavaType() -> model.Employee
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableType() -> ENTITY_TYPE
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getIdType() -> BasicTypeImpl@32048085:Integer [ javaType: class java.lang.Integer]
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableJavaType() -> model.PhoneNumber
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getBindableType() -> ENTITY_TYPE
-16   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:13:49,953 - getIdType() -> BasicTypeImpl@16426320:String [ javaType: class java.lang.String]
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getBindableJavaType() -> model.Project
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getIdType() -> BASIC
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getBindableJavaType() -> model.SmallProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getIdType() -> BASIC
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getBindableJavaType() -> model.LargeProject
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getBindableType() -> ENTITY_TYPE
-0    [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,656 - getIdType() -> BASIC
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getBindableJavaType() -> model.Address
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getIdType() -> BASIC
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getBindableJavaType() -> model.Employee
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getIdType() -> BASIC
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getBindableJavaType() -> model.PhoneNumber
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getBindableType() -> ENTITY_TYPE
-15   [main] DEBUG testing.MyAppTest  10 十二月 2011 13:14:27,671 - getIdType() -> BASIC
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:25:39,296 - 0
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:26:54,734 - 0
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:33:04,515 - lastname-> Smitty
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:36:12,281 - lastname-> Smitty
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:36:12,281 - Done!
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:37:08,468 - lastname-> Smitty
+110  [main] DEBUG testing.MyQuery  14 十二月 2011 12:37:08,578 - Done!
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:37:45,562 - lastname-> Smitty
+16   [main] DEBUG testing.MyQuery  14 十二月 2011 12:37:45,578 - Done!
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:38:58,953 - lastname-> Smitty
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:43:40,468 - lastname-> Smitty
+453  [main] DEBUG testing.MyQuery  14 十二月 2011 12:43:40,921 - Done!
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:44:21,843 - lastname-> Smitty
+360  [main] DEBUG testing.MyQuery  14 十二月 2011 12:44:22,203 - TOPEmployee Management
+360  [main] DEBUG testing.MyQuery  14 十二月 2011 12:44:22,203 - Done!
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:46:51,109 - lastname-> Smitty
+375  [main] DEBUG testing.MyQuery  14 十二月 2011 12:46:51,484 - TOPEmployee Management
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 12:56:07,500 - lastname-> Smitty
+437  [main] DEBUG testing.MyQuery  14 十二月 2011 12:56:07,937 - TOPEmployee Management
+453  [main] DEBUG testing.MyQuery  14 十二月 2011 12:56:07,953 -  projects 1
+453  [main] DEBUG testing.MyQuery  14 十二月 2011 12:56:07,953 - Done!
+0    [main] DEBUG testing.MyQuery  14 十二月 2011 13:21:45,312 - Done!
