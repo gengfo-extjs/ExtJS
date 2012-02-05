@@ -1,4 +1,4 @@
-class MySimple
+class RomanNumveral
   
   def initialize()
     @ROMAN_MAP = { 1    => "I",

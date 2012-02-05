@@ -335,3 +335,118 @@ D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.o
 	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:152:in `each'
 	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:152:in `<main>'
 
+
+!ENTRY com.aptana.usage 4 0 2012-02-05 03:09:42.953
+!MESSAGE (Build 3.0.0.1325099706) [ERROR]  An error occurred while shutting down the database
+!STACK 0
+java.sql.SQLException: Database 'aptanaDB' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(Unknown Source)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.AutoloadedDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:582)
+	at java.sql.DriverManager.getConnection(DriverManager.java:207)
+	at com.aptana.usage.AptanaDB.shutdown(AptanaDB.java:151)
+	at com.aptana.usage.UsagePlugin.stop(UsagePlugin.java:71)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:843)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:836)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:501)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:550)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1097)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:597)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:266)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:690)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:588)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:415)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:198)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:620)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1408)
+Caused by: java.sql.SQLException: Database 'aptanaDB' not found.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 37 more
+!SESSION 2012-02-05 03:30:29.171 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2012-02-05 03:30:53.578
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-02-05 03:30:53.578
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		com.aptana.ide.syncing.ui.handlers.DownloadHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.radrails.rails.internal.ui.commands.DebugServerHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-02-05 03:30:53.578
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		com.aptana.ide.syncing.ui.handlers.UploadHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.aptana.ruby.core 4 0 2012-02-05 03:31:16.515
+!MESSAGE (eval):1: warning: variable $= is no longer effective
+(eval):1: warning: variable $KCODE is no longer effective
+(eval):1: warning: variable $KCODE is no longer effective
+D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:180:in `eval': Permission denied - D:\GengFo\GitRoot\ExtJS\RubyDojo\.metadata\.plugins\com.aptana.ruby.core\-25524616\4 (Errno::EACCES)
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:180:in `eval'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:180:in `block (3 levels) in <main>'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:179:in `each'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:179:in `block (2 levels) in <main>'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:178:in `open'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:178:in `block in <main>'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:152:in `each'
+	from D:/GengFo/DevTools/old/eclipse-java-helios-SR2-win32/configuration/org.eclipse.osgi/bundles/447/1/.cp/ruby/core_stubber.rb:152:in `<main>'
+

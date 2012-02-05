@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;RomanNumerals/lib/RomanNumerialByMap&apos; to &apos;roman_-numerial_by_map&apos;" description="Rename resource &apos;RomanNumerialByMap&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="lib/RomanNumerialByMap" name="roman_-numerial_by_map" stamp="1328412928406" updateReferences="true"/>
+</session>

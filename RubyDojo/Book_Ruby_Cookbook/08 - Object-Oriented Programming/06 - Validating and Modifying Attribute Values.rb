@@ -37,14 +37,15 @@ jacob = Name.new('Jacob', 'Berendes')
 jacob.first = 'Mary Sue'
 jacob.full_name                                 # => "Mary Sue Berendes"
 
-john = Name.new('john', 'von Neumann')
+john = Name.new('John', 'von Neumann')
 john.full_name                                  # => "John von Neumann"
+puts john.first
 john.first = 'john'
-john.first                                      # => "John"
-john.first = nil
+puts john.first                                      # => "John"
+#john.first = nil
 # ArgumentError: Everyone must have a first name.
 
-Name.new('Kero, international football star and performance artist', nil)
+#Name.new('Kero, international football star and performance artist', nil)
 # ArgumentError: Everyone must have a last name.
 #---
 class SimpleContainer
