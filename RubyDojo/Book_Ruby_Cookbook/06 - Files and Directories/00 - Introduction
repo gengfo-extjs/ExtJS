@@ -1,0 +1,39 @@
+Windows paths in Ruby use forward slashes to separate the parts of
+a path, even though Windows itself uses backslashes. Ruby will also
+accept backslashes in a Windows path, so long as you escape them:
+
+#---
+Though this chapter focuses mainly on disk files, most of the methods
+of @File@ are actually methods of its superclass, @IO@. You'll
+encounter many other classes that are also subclasses of @IO@, or just
+respond to the same methods. This means that most of the tricks
+described in this chapter are applicable to classes like the @Socket@
+class for Internet sockets and the infinitely useful @StringIO@ (see
+[[10320]]).
+
+Your Ruby program's standard input, output, and error (@$stdin@,
+@$stdout@, and @$stderr@) are also @IO@ objects, which lets you treat
+them like files. This one-line program echoes its input to its output:
+
+#---
+The @Kernel#puts@ command just calls @$stdout.puts@, so that one-liner
+is equivalent to this one:
+
+#---
+Not all file-like objects support all the methods of @IO@. See
+[[20396]] for ways to get around the most common problem with
+unsupported methods. Also see [[20696]] for more on the default @IO@
+objects.
+
+Several of the recipes in this chapter (like [[19760]] and
+[[17044]]) create specific directory structures to demonstrate
+different concepts. Rather than bore you by filling up recipes with
+the Ruby code to create a certain directory structure, we've written a
+method that takes a short description of a directory structure, and
+creates the appropriate files and subdirectories.
+
+#---
+Now we can present the directory structure as a data structure and
+create it with a single method call:
+
+#---

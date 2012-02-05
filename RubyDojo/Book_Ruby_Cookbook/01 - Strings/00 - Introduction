@@ -1,0 +1,56 @@
+string = 'My first string'
+#---
+=> "My first string"
+#---
+string = 'My first string'                   # => "My first string"
+#---
+string.length                                # => 15
+#---
+string.length()                              # => 15
+#---
+string.count 'i'                             # => 2   # "i" occurs twice.
+string.count('i')                            # => 2
+#---
+string.length.next                           # => 16
+#---
+french_string = "il \xc3\xa9tait une fois"   # => "il \303\251tait une fois"
+#---
+french_string.length                         # => 18
+#---
+puts "This string\ncontains a newline"
+# This string
+# contains a newline
+#---
+puts 'it may look like this string contains a newline\nbut it doesn\'t'
+# it may look like this string contains a newline\nbut it doesn't
+
+puts 'Here is a backslash: \\ '
+# Here is a backslash: \
+#---
+long_string = <<EOF
+Here is a long string
+With many paragraphs
+EOF
+# => "Here is a long string\nWith many paragraphs\n"
+
+puts long_string
+# Here is a long string
+# With many paragraphs
+#---
+string                                    # => "My first string"
+string.slice(3, 5)                        # => "first"
+#---
+string[3].chr + string[4].chr + string[5].chr + string[6].chr +
+ string[7].chr
+# => "first"
+#---
+string[3, 5]                             # => "first"
+#---
+string.upcase                            # => "MY FIRST STRING"
+string                                   # => "My first string"
+string.upcase!                           # => "MY FIRST STRING"
+string                                   # => "MY FIRST STRING"
+#---
+string.empty?                            # => false
+string.include? 'MY'                     # => true
+#---

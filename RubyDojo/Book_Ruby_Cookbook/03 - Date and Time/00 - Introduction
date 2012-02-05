@@ -1,0 +1,33 @@
+Time.now                                   # => Sat Mar 18 14:49:30 EST 2006
+Time.at(0)                                 # => Wed Dec 31 19:00:00 EST 1969
+#---
+t = Time.at(0)
+t.sec                                      # => 0
+t.min                                      # => 0
+t.hour                                     # => 19
+t.day                                      # => 31
+t.month                                    # => 12
+t.year                                     # => 1969
+t.wday                                     # => 3     # Numeric day of week; Sunday is 0
+t.yday                                     # => 365   # Numeric day of year
+t.isdst                                    # => false # Is Daylight Saving Time in effect?
+t.zone                                     # => "EST" # Time zone
+#---
+Time.local(1865, 4, 9)
+# ArgumentError: time out of range
+Time.local(2100, 1, 1)
+# ArgumentError: time out of range
+#---
+require 'date'
+DateTime::new(1865, 4, 9).to_s            # => "1865-04-09T00:00:00Z"
+DateTime::new(2100, 1, 1).to_s            # => "2100-01-01T00:00:00Z"
+#---
+# Time zero for the date library:
+DateTime::new.to_s                        # => "-4712-01-01T00:00:00Z"
+
+# The current date and time:
+DateTime::now.to_s                        # => "2006-03-18T14:53:18-0500"
+#---
+Time.local(1865,4,9)                  # => Sun Apr 09 00:00:00 EWT 1865
+Time.local(2100,1,1)                  # => Fri Jan 01 00:00:00 EST 2100
+#---

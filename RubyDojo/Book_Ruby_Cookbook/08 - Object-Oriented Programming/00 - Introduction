@@ -1,0 +1,64 @@
+class Duck
+  def quack
+    'Quack!'
+  end
+  
+  def swim
+    'Paddle paddle paddle...'
+  end
+end
+
+class Goose
+  def honk
+    'Honk!'
+  end
+
+  def swim
+    'Splash splash splash...'
+  end
+end
+
+class DuckRecording
+  def quack
+    play
+  end
+
+  def play
+    'Quack!'
+  end
+end
+#---
+def make_it_quack(Duck duck)
+  duck.quack
+end
+
+make_it_quack(Duck.new)                   # => "Quack!"
+make_it_quack(DuckRecording.new)        
+# TypeException: object not of type Duck
+#---
+def make_it_swim(Duck duck)
+  duck.swim
+end
+
+make_it_swim(Duck.new)                    # => "Paddle paddle paddle..."
+make_it_swim(Goose.new)
+# TypeException: object not of type Goose
+#---
+def make_it_quack(duck)
+  duck.quack
+end
+make_it_quack(Duck.new)                   # => "Quack!"
+make_it_quack(DuckRecording.new)          # => "Quack!"
+
+def make_it_swim(duck)
+  duck.swim
+end
+make_it_swim(Duck.new)                    # => "Paddle paddle paddle..."
+make_it_swim(Goose.new)                   # => "Splash splash splash..."
+#---
+make_it_quack(Goose.new)
+# NoMethodError: undefined method `quack' for #<Goose:0x2bb8a8>
+
+make_it_swim(DuckRecording.new)
+# NoMethodError: undefined method `swim' for #<DuckRecording:0x2b97d8>
+#---

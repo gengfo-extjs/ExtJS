@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Book_TheRubyProgrammingLanguage&apos; to &apos;Book_Ruby_Prog_Lang&apos;" description="Rename resource &apos;Book_TheRubyProgrammingLanguage&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Book_TheRubyProgrammingLanguage" name="Book_Ruby_Prog_Lang" stamp="1328403623984" updateReferences="true"/>
+</session>

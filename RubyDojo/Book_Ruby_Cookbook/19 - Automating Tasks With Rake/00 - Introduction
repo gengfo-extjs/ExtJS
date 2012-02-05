@@ -1,0 +1,25 @@
+# Rakefile
+desc "Cross the bridge."
+task :cross_bridge => [:build_bridge] do
+  puts "I'm crossing the bridge."
+end
+
+desc "Build the bridge"
+task :build_bridge do
+  puts 'Bridge construction is complete.'
+end
+
+task :default => [:cross_bridge]
+#---
+$ rake
+Bridge construction is complete.
+I'm crossing the bridge.
+
+$ rake build_bridge
+Bridge construction is complete.
+#---
+$ rake -T
+(in /home/leonardr/my_project/)
+rake build_bridge  # Build the bridge.
+rake cross_bridge  # Cross the bridge.
+#---

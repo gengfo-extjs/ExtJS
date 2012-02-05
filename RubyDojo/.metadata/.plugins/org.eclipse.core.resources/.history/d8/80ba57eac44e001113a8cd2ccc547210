@@ -1,0 +1,8 @@
+MAP = {
+  "k1" => "abc",
+  "k2" => "efg"
+}
+
+text =""
+MAP.each{ |k,v| text << "#{k} is #{v}"}
+puts text

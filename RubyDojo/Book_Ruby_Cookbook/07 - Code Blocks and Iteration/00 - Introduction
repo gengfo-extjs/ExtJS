@@ -1,0 +1,69 @@
+[1,2,3].each {|i| puts i}
+# 1
+# 2
+# 3
+#---
+[1,2,3].each { |i| puts i }
+
+# 1
+# 2
+# 3
+#---
+[1,2,3].each do |i|
+  if i % 2 == 0
+    puts "#{i} is even."
+  else
+    puts "#{i} is odd."
+  end
+end
+# 1 is odd.
+# 2 is even.
+# 3 is odd.
+#---
+1.upto 3 do |x|
+  puts x
+end
+# 1
+# 2
+# 3
+
+1.upto 3 { |x| puts x }
+# SyntaxError: compile error
+#---
+1.upto(3) { |x| puts x }
+# 1
+# 2
+# 3
+#---
+hello = proc { "Hello" }
+hello.call
+# => "Hello"
+
+log = Proc.new { |str| puts "[LOG] #{str}" }
+log.call("A test log message.")
+# [LOG] A test log message.
+#---
+{1=>2, 2=>4}.each { |k,v| puts "Key #{k}, value #{v}" }
+# Key 1, value 2
+# Key 2, value 4
+#---
+def times_n(n)
+  lambda { |x| x * n }
+end
+
+#---
+times_ten = times_n(10)
+times_ten.call(5)                                    # => 50
+times_ten.call(1.25)                                 # => 12.5
+
+circumference = times_n(2*Math::PI)
+circumference.call(10)                               # => 62.8318530717959
+circumference.call(3)                                # => 18.8495559215388
+[1, 2, 3].collect(&circumference)
+# => [6.28318530717959, 12.5663706143592, 18.8495559215388]
+#---
+ceiling = 50
+# Which of these numbers are less than the target?
+[1, 10, 49, 50.1, 200].select { |x| x < ceiling }
+# => [1, 10, 49]
+#---

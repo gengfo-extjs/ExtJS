@@ -1,0 +1,55 @@
+empty = Hash.new                         # => {}
+empty = {}                               # => {}
+numbers = { 'two' => 2, 'eight' => 8}    # => {"two"=>2, "eight"=>8}
+#---
+numbers["two"]                           # => 2
+numbers["ten"] = 10                      # => 10
+numbers                                  # => {"two"=>2, "eight"=>8, "ten"=>10}
+#---
+numbers.keys                     # => ["two", "eight", "ten"]
+numbers.values                   # => [2, 8, 10]
+numbers.to_a                     # => [["two", 2], ["eight", 8], ["ten", 10]]
+#---
+motto = "Don't tread on me" 
+flag = { :motto => motto, 
+         :picture => "rattlesnake.png"}
+motto.upcase!
+flag[:motto]                            # => "DON'T TREAD ON ME"
+#---
+a = ["Maury", "Momento", "123 Elm St.", "West Covina", "CA"]
+h = { :first_name => "Maury",
+      :last_name => "Momento",
+      :address => "123 Elm St."
+      :city => "West Covina",
+      :state => "CA" }
+#---
+a = [1, 4, 9, 16]
+h = { :one_squared => 1, two_squared => 4, three_squared => 9,
+      :four_squared => 16 }
+#---
+class BadIdea
+  def hash
+    100
+  end
+end
+#---
+class StringHolder
+  attr_reader :string
+  def initialize(s)
+    @string = s
+  end
+
+  def ==(other)
+    @string == other.string
+  end
+
+  def hash
+    @string.hash
+  end
+end
+a = StringHolder.new("The same string.")
+b = StringHolder.new("The same string.")
+a == b                                                      # => true
+a.hash                                                      # => -1007666862
+b.hash                                                      # => -1007666862
+```#---

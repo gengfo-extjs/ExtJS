@@ -1,0 +1,30 @@
+Ruby Cookbook Source README
+by Leonard Richardson (leonardr@segfault.org)
+Last update: 09/06/2006
+
+This source code was extracted automatically from my markup copy of
+the Ruby Cookbook. Every chapter has its own directory, and every
+recipe (and chapter introduction) has its own file.
+
+A recipe's file contains the text of that recipe that the book
+presents as code. This may not all be Ruby code. Some recipes contain
+SQL, XML, shell commands, or C code. Sections of code (separated, in
+the book, by text), are here separated by a comment that looks like
+this:
+
+#---
+
+The code is from the pre-edit final draft. Thus, there are several
+changes between the code contained here and what you see in the
+book. I don't know where these changes are but I'm fairly sure they're
+all minor. Let me know if you find any.
+
+I've skimmed this presentation of the code to check for obvious
+problems, but there may be code in the book that didn't get extracted
+by my script. Again, let me know if you have any problems with the
+code.
+
+This code incorporates fixes for the two errata published on
+O'Reilly's site as of July 17, 2006: "Query strings in fetched URLs
+are stripped (14.3, 14.20)" and "No need to override Logger::Formatter
+to change the log format (17.5)".
