@@ -12,3 +12,4 @@ classes
 *.jar
 *.war
 *.zip
+.metadata
