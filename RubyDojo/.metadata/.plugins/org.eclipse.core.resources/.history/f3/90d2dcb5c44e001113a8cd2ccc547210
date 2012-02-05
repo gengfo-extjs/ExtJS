@@ -1,6 +1,0 @@
-MAP = {
-  k1 => "abc",
-  k2 => "efg"
-}
-
-MAP.new

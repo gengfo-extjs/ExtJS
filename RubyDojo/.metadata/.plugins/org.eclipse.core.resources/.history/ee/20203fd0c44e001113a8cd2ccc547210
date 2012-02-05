@@ -1,8 +1,0 @@
-MAP = {
-  k1 => "abc",
-  k2 => "efg"
-}
-
-
-MAP.each{ |k,v| text << "#{k} is #{v}"}
-puts text

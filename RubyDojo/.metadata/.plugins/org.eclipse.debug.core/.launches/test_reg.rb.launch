@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="com.aptana.ruby.debug.core.launchConfigurationType">
-<stringAttribute key="com.aptana.ruby.debug.ATTR_FILE_NAME" value="D:\GengFo\GitRoot\ExtJS\RubyDojo\Book_TheRubyProgrammingLanguage\test\test_reg.rb"/>
-<stringAttribute key="com.aptana.ruby.debug.ATTR_WORKING_DIR" value="D:\GengFo\GitRoot\ExtJS\RubyDojo\Book_TheRubyProgrammingLanguage\test"/>
-<stringAttribute key="org.eclipse.debug.core.source_locator_id" value="com.aptana.ruby.debug.core.sourceLocator"/>
-</launchConfiguration>
