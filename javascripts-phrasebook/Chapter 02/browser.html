@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+var uA = navigator.userAgent;
+var browserType = "unknown";
+if (uA.indexOf("Opera") > -1) {
+  browserType = "Opera";
+} else if (uA.indexOf("Safari") > -1) {
+  browserType = "Safari";
+} else if (uA.indexOf("Konqueror") > -1) {
+  browserType = "Konqueror";
+} else if (uA.indexOf("Gecko") > -1) {
+  browserType = "Mozilla";
+} else if (uA.indexOf("MSIE") > -1) {
+  browserType = "Internet Explorer";
+}
+window.alert(browserType);
+</script>

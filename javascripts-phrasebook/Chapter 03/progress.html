@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+function progress() {
+  if (document.images["bar"].width < 200) {
+    document.images["bar"].width += 5;
+    document.images["bar"].height = 5;
+  } else {
+    clearInterval(ID);
+  }
+ }
+
+var ID;
+window.onload = function() {
+  ID = setInterval("progress();", 500);
+}
+</script>
+<img src="black.gif" name="bar" />

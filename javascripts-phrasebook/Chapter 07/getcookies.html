@@ -1,0 +1,26 @@
+<script language="JavaScript" type="text/javascript">
+function HtmlEscape(s) {
+  return s.replace(/&/, "&amp;")
+          .replace(/</, "&lt;")
+          .replace(/>/, "&gt;")
+          .replace(/"/, "&quot;")
+          .replace(/'/, "&apos;");
+}
+  
+document.write("<table><tr><th>Name</th><th>Value</th></tr>");
+var cookies = document.cookie.split(/; /g);
+for (var i=0; i<cookies.length; i++) {
+  var cookie = cookies[i];
+  if (cookie.indexOf("=") == -1) {
+    continue;
+  }
+  var name = cookie.substring(0, cookie.indexOf("="));
+  var value = cookie.substring(cookie.indexOf("=") + 1);
+  document.write("<tr><td>" + 
+                 HtmlEscape(name) + 
+                 "</td><td>" + 
+                 HtmlEscape(unescape(value)) +
+                 "</td></tr>");
+}
+document.write("</table>");
+</script>

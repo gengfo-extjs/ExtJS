@@ -1,0 +1,12 @@
+<script language="JavaScript" type="text/javascript">
+function changeImage(name, url) {
+  if (document.images[name]) {
+    document.images[name].src = url;
+  }
+}
+</script>
+<img 
+  name="myImage"
+  src="inactive.gif"
+  onmouseover="changeImage('myImage', 'active.gif');"
+  onmouseout="changeImage('myImage', 'inactive.gif');" />

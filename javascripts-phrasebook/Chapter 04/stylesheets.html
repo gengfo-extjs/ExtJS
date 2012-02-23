@@ -1,0 +1,22 @@
+<script language="JavaScript" type="text/javascript">
+function makeBold() {
+  document.styleSheets[0].disabled = false;
+  document.styleSheets[1].disabled = true;
+  window.setTimeout("makeLighter();", 1000);
+}
+
+function makeLighter() {
+  document.styleSheets[0].disabled = true;
+  document.styleSheets[1].disabled = false;
+  window.setTimeout("makeBold();", 1000);
+}
+
+window.onload = makeBold;
+</script>
+<style type="text/css" id="strong">
+  p { font-weight: bold; }
+</style>
+<style type="text/css" id="weak">
+  p { font-weight: lighter; }
+</style>
+<p>CSS and JavaScript</p>

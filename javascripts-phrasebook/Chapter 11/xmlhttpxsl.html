@@ -1,0 +1,36 @@
+<script language="JavaScript" type="text/javascript" src="xmlhttp.js"></script>
+<script language="JavaScript" type="text/javascript">
+var XMLHttp = getXMLHttp();
+window.onload = function() {
+  XMLHttp.open("GET", "phrasebooks.xml");
+  XMLHttp.onreadystatechange = handlerFunction;
+  XMLHttp.send(null);
+}
+
+function handlerFunction() {
+  if (XMLHttp.readyState == 4) {
+    var xml = XMLHttp.responseXML;
+    if (window.ActiveXObject) {
+      var xslt = new ActiveXObject("MSXML2.FreeThreadedDOMDocument");
+      xslt.async = false;
+      xslt.load("phrasebooks.xsl");
+      var template = new ActiveXObject("MSXML2.XSLTemplate");
+      template.stylesheet = xslt;
+      var process = template.createProcessor();
+      process.input = xml;
+      process.transform();
+      var para = document.createElement("p");
+      para.innerHTML = process.output;
+      document.body.appendChild(para);
+    } else if (window.XSLTProcessor) {
+      var xslt = document.implementation.createDocument("", "", null);
+      xslt.async = false;
+      xslt.load("phrasebooks.xsl");
+      var process = new XSLTProcessor();
+      process.importStylesheet(xslt);
+      var result = process.transformToFragment(xml, document);
+      document.body.appendChild(result);
+    }
+  }
+}
+</script>

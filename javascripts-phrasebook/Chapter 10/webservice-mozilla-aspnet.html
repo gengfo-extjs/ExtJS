@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>JavaScript</title>
+  <script language="Javascript" type="text/javascript">
+  function callWebService(f) {
+    var soapcall = new SOAPCall();
+    soapcall.actionURI = "http://javascript.phrasebook.org/randomNumber";
+    soapcall.transportURI = "http://localhost/webservice.asmx";
+
+    var l = new SOAPParameter(parseInt(f.elements["lower"].value), "lower");
+    var u = new SOAPParameter(parseInt(f.elements["upper"].value), "upper");
+    var soapenc = new SOAPEncoding();
+    assenc = soapenc.getAssociatedEncoding(
+      "http://schemas.xmlsoap.org/soap/encoding/",
+      false
+    );
+    var schemacoll = assenc.schemaCollection;
+    var schematype = schemacoll.getType(
+      "integer",
+      "http://www.w3.org/2001/XMLSchema"
+    );
+    l.schemaType = schematype;
+    u.schemaType = schematype;
+    var parameters = [l, u];
+
+    soapcall.encode(
+      0,
+      "randomNumber",
+      "http://javascript.phrasebook.org/",
+      0,
+      [],
+      parameters.length,
+      parameters
+    );
+    soapcall.asyncInvoke(callbackFunction);
+  }
+
+  function callbackFunction(result) {
+    document.getElementById("random").innerHTML =
+      result.body.firstChild.firstChild.firstChild.data;
+  }
+  </script>
+</head>
+<body>
+  <form>
+    A number between
+    <input type="text" name="lower" size="3" value="1" /> and
+    <input type="text" name="upper" size="3" value="49" /> is
+    <span id="random" /><br />
+    <input type="button" value="Retrieve" onclick="callWebService(this.form);" />
+  </form>
+</body>
+</html>

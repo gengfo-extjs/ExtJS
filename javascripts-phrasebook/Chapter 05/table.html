@@ -1,0 +1,39 @@
+<script language="JavaScript" type="text/javascript">
+function createTable(data) {
+  var table = document.createElement("table");
+  var thead = document.createElement("thead");
+  var tr = document.createElement("tr");
+  for (var i = 0; i < data[0].length; i++) {
+    var th = document.createElement("th");
+    var newText = document.createTextNode(data[0][i]);
+    th.appendChild(newText);
+    tr.appendChild(th);
+  }
+  thead.appendChild(tr);
+  table.appendChild(thead);
+  
+  var tbody = document.createElement("tbody");
+  for (var i = 1; i < data.length; i++) {
+    var tr = document.createElement("tr");
+    for (var j=0; j < data[i].length; j++) {
+      var td = document.createElement("td");
+      var newText = document.createTextNode(data[i][j]);
+      td.appendChild(newText);
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+
+  table.appendChild(tbody);
+  return table;
+}
+
+window.onload = function() {
+  var table = createTable([
+    ["1", "2", "3", "4", "5"],
+    ["one", "two", "three", "four", "five"],
+    ["un", "deux", "trois", "quatre", "cinq"],
+    ["eins", "zwei", "drei", "vier", "fünf"]]);
+  document.body.appendChild(table);
+}
+</script>

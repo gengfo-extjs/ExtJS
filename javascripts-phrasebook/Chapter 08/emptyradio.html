@@ -1,0 +1,13 @@
+<script language="JavaScript" type="text/javascript">
+function empty(f) {
+  for (var i=0; i<f.elements["colors"].length; i++) {
+    f.elements["colors"][i].checked = false;
+  }
+}
+</script>
+<form onsubmit="return checkform(this);">
+  <input type="radio" name="colors" value="R" />red
+  <input type="radio" name="colors" value="G" />green
+  <input type="radio" name="colors" value="B" />blue
+  <input type="button" onclick="empty(this.form);" value="clear" />
+</form>

@@ -1,0 +1,19 @@
+<script language="JavaScript" type="text/javascript">
+function changeImage(name, url) {
+  if (document.images[name]) {
+    document.images[name].src = url;
+  }
+}
+
+function preloadImage(url) {
+  var i = new Image();
+  i.src = url;
+}
+</script>
+<body onload="preloadImage('active.gif');">
+<img 
+  name="myImage"
+  src="inactive.gif"
+  onmouseover="changeImage('myImage', 'active.gif');"
+  onmouseout="changeImage('myImage', 'inactive.gif');" />
+</body>

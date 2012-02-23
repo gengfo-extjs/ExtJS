@@ -1,0 +1,15 @@
+<script language="JavaScript" type="text/javascript">
+function eventHandler() {
+  window.alert("Event fired!");
+}
+
+window.onload = function() {
+  var button = document.getElementById("eventButton");
+  if (button.addEventListener) {
+    button.addEventListener("click", eventHandler, false);
+  } else if (button.attachEvent) {
+    button.attachEvent("onclick", eventHandler);
+  }
+};
+</script>
+<input type="button" id="eventButton" value="Click me!" />

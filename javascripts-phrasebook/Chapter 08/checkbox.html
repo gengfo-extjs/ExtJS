@@ -1,0 +1,11 @@
+<script language="JavaScript" type="text/javascript">
+function showStatus(f) {
+  window.alert("The checkbox is " +
+    (f.elements["chkbox"].checked ? "checked." : "not checked."));
+ }
+</script>
+<form>
+  <input type="checkbox" name="chkbox" />
+  <input type="button" value="Show status" 
+    onclick="showStatus(this.form);" />
+</form>

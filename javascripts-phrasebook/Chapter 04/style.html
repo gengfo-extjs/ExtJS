@@ -1,0 +1,14 @@
+<script language="JavaScript" type="text/javascript">
+function makeBold() {
+  document.getElementById("para").style.fontWeight = "bold";
+  window.setTimeout("makeLighter();", 1000);
+}
+
+function makeLighter() {
+  document.getElementById("para").style.fontWeight = "lighter";
+  window.setTimeout("makeBold();", 1000);
+}
+
+window.onload = makeBold;
+</script>
+<p id="para">CSS and JavaScript</p>

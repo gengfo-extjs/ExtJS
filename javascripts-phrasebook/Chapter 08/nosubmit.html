@@ -1,0 +1,13 @@
+<script language="JavaScript" type="text/javascript">
+function checkform(f) {
+  if (f.elements["textfield"].value == "") {
+    return false;
+  } else {
+    return true;
+  }
+}
+</script>
+<form onsubmit="return checkform(this);">
+  Username <input type="text" name="textfield" />
+  <input type="submit" value="Submit data" />
+</form>

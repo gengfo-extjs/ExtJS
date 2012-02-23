@@ -1,0 +1,32 @@
+<script language="JavaScript" type="text/javascript">
+var nr = 0;
+var id = null;
+function myParseInt(s) {
+  var ret = parseInt(s);
+  return (isNaN(ret) ? 0 : ret);
+}
+function animate() {
+  nr++;
+  if (nr > 50) {
+    window.clearInterval(id);
+    document.getElementById("element").style.visibility = "hidden";
+  } else {
+    var el = document.getElementById("element");
+    el.style.left = (myParseInt(el.style.left) + 5) + "px";
+    el.style.posLeft += 5;
+    el.style.top = (myParseInt(el.style.top) + 5) + "px";
+    el.style.posTop += 5;
+  }
+}
+window.onload = function() {
+  id = window.setInterval("animate();", 100);
+};
+</script>
+<h1>My Portal</h1>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<div id="element" style="position: absolute; background-color: #eee; border: 1px solid">
+JavaScript Phrasebook
+</div>

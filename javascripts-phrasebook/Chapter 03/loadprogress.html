@@ -1,0 +1,25 @@
+<script language="JavaScript" type="text/javascript">
+function showprogress() {
+  if (document.images.length == 0) {
+    return false; 
+  }
+  var loaded = 0;
+  for (var i=0; i<document.images.length; i++) {
+    if (document.images[i].complete) {
+      loaded++;
+    }
+  }
+  var percentage = Math.round(100 * loaded / document.images.length);
+  document.getElementById("progress").innerHTML = 
+    percentage + "% loaded";
+  if (percentage == 100) {
+    window.clearInterval(ID);
+  }
+}
+
+var ID = window.setInterval("showprogress();", 500);
+</script>
+<p id="progress">0% loaded</p>
+<img src="gfx.php?wait=1" />
+<img src="gfx.php?wait=3" />
+<img src="gfx.php?wait=5" />

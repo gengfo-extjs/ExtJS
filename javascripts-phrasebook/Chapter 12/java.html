@@ -1,0 +1,8 @@
+<script language="JavaScript" type="text/javascript">
+function paint(field) {
+  document.JavaApplet.setString(field.value);
+}
+</script>
+<applet code="JavaApplet.class" name="JavaApplet" 
+  width="150" height="75"></applet><br />
+<input type="text" onkeyup="paint(this);" />

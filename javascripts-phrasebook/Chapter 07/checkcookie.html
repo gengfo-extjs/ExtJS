@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+document.cookie="CookieTestTemp=success"
+document.cookie="CookieTestPers=success; expires=Tue, 25-Dec-2012 12:34:56 GMT"
+if (document.cookie.indexOf("CookieTestTemp=success") != -1) {
+  window.alert("Temporary cookies are supported!")
+  document.cookie="CookieTestTemp=JavaScript; expires=Thu, 25-Dec-1980 12:34:56 GMT"
+} else {
+  window.alert("Temporary cookies are not supported!")
+}
+if (document.cookie.indexOf("CookieTestPers=success") != -1) {
+  window.alert("Persistent cookies are supported!")
+  document.cookie="CookieTestPers=JavaScript; expires=Thu, 25-Dec-1980 12:34:56 GMT"
+} else {
+  window.alert("Persistent cookies are not supported!")
+}
+</script>

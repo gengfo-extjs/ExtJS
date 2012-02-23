@@ -1,0 +1,10 @@
+<script language="JavaScript" type="text/javascript">
+function showText(f) {
+  window.alert(f.elements["textfield"].value);
+ }
+</script>
+<form>
+  <input type="text" name="textfield" />
+  <input type="button" value="Show text" 
+    onclick="showText(this.form);" />
+</form>

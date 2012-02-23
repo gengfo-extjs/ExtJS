@@ -1,0 +1,12 @@
+<script language="JavaScript" type="text/javascript">
+var nr = 1;
+function addItem(cloneMode) {
+  var list = document.getElementById("list");
+  var oldItem = list.firstChild;
+  var newItem = oldItem.cloneNode(cloneMode);
+  list.appendChild(newItem);
+}
+</script>
+<ul id="list"><li><a href="http://www.samspublishing.com/">Item 1</a></li></ul>
+<input type="button" onclick="addItem(true);" value="Clone all" />
+<input type="button" onclick="addItem(false);" value="Clone node only" />

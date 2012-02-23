@@ -1,0 +1,48 @@
+<script language="JavaScript" type="text/javascript">
+function randomColor() {
+  var chars = "0123456789abcdef";
+  var color = "#";
+  for (var i=0; i<6; i++) {
+    var rnd = Math.floor(16 * Math.random());
+    color += chars.charAt(rnd);
+  }
+  return color;
+}
+
+function makeBold() {
+  document.styleSheets[0].disabled = false;
+  document.styleSheets[1].disabled = true;
+  if (document.styleSheets[0].rules) {
+    document.styleSheets[0].rules[0].style.color = randomColor();
+    document.styleSheets[0].rules[1].style.color = randomColor();
+  } else if (document.styleSheets[0].cssRules) {
+    document.styleSheets[0].cssRules[0].style.color = randomColor();
+    document.styleSheets[0].cssRules[1].style.color = randomColor();  
+  }
+  window.setTimeout("makeLighter();", 1000);
+}
+
+function makeLighter() {
+  document.styleSheets[0].disabled = true;
+  document.styleSheets[1].disabled = false;
+  if (document.styleSheets[0].rules) {
+    document.styleSheets[1].rules[0].style.color = randomColor();
+    document.styleSheets[1].rules[1].style.color = randomColor();
+  } else if (document.styleSheets[0].cssRules) {
+    document.styleSheets[1].cssRules[0].style.color = randomColor();
+    document.styleSheets[1].cssRules[1].style.color = randomColor();  
+  }
+  window.setTimeout("makeBold();", 1000);
+}
+
+window.onload = makeBold;
+</script>
+<style type="text/css" id="strong">
+  p { font-weight: bold; }
+  span { font-style: italic; }
+</style>
+<style type="text/css" id="weak">
+  p { font-weight: lighter; }
+  span { font-style: normal; }
+</style>
+<p>CSS <span>and</span> JavaScript</p>

@@ -1,0 +1,14 @@
+<script language="JavaScript" type="text/javascript">
+window.onload = function() {
+  var s = "";
+  with (document.getElementById("para")) {
+    for (var i=0; i<childNodes.length; i++) {
+      with (childNodes[i]) {
+        s += nodeName + ": " + nodeValue + " (" + nodeType + ")\n";
+      }
+    }
+  }
+  window.alert(s);
+}
+</script>
+<p id="para"><em>JavaScript</em> Phrasebook</p>

@@ -1,0 +1,9 @@
+<script language="JavaScript" type="text/javascript">
+var newwindow = window.open("", "popupcheck", 
+  "width=100,height=100,directories=no,menubar=no,toolbar=no");
+if (newwindow) {
+  newwindow.close();
+} else {
+  window.alert("Popup blocker detected!");
+}
+</script>

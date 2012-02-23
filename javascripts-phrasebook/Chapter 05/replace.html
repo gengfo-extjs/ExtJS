@@ -1,0 +1,13 @@
+<script language="JavaScript" type="text/javascript">
+var nr = 1;
+function addItem() {
+  var list = document.getElementById("list");
+  var newNode = document.createElement("li");
+  nr++;
+  var newTextNode = document.createTextNode("Item " + nr);
+  newNode.appendChild(newTextNode);
+  list.replaceChild(newNode, list.firstChild);
+}
+</script>
+<ul id="list"><li>Item 1</li></ul>
+<input type="button" onclick="addItem();" value="Replace item" />

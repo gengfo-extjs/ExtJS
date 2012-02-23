@@ -1,0 +1,35 @@
+<?xml version="1.0"?><definitions name="DiscoServer" targetNamespace="urn:DiscoServer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:DiscoServer" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<types xmlns="http://schemas.xmlsoap.org/wsdl/">
+</types>
+<portType name="DiscoServerPort">
+<operation name="randomNumber">
+<input message="tns:randomNumberRequest" />
+<output message="tns:randomNumberResponse" />
+</operation>
+</portType>
+<binding name="DiscoServerBinding" type="tns:DiscoServerPort">
+<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+<operation name="randomNumber">
+<soap:operation soapAction="urn:js-phrasebook-soapservice#serviceclass#randomNumber" />
+<input>
+<soap:body use="encoded" namespace="urn:js-phrasebook-soapservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+</input>
+<output>
+<soap:body use="encoded" namespace="urn:js-phrasebook-soapservice" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+</output>
+</operation>
+</binding>
+<service name="DiscoServerService">
+<documentation />
+<port name="DiscoServerPort" binding="tns:DiscoServerBinding">
+<soap:address location="http://localhost/js/webservice.php" />
+</port>
+</service>
+<message name="randomNumberRequest">
+<part name="lower" type="xsd:int" />
+<part name="upper" type="xsd:int" />
+</message>
+<message name="randomNumberResponse">
+<part name="random" type="xsd:int" />
+</message>
+</definitions>

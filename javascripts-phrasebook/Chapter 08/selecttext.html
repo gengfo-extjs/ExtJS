@@ -1,0 +1,18 @@
+<script language="JavaScript" type="text/javascript">
+window.onload = function() {
+  var field = document.forms[0].elements["textfield"];
+  if (field.createTextRange) {     
+    var range = field.createTextRange();
+    range.moveStart("character", .0);
+    range.moveEnd("character", field.value.length - 1);
+    range.select();
+  } else if (field.setSelectionRange) {
+    field.setSelectionRange(0, field.value.length);
+  }
+  field.focus();
+};
+</script>
+<form>
+  <input type="text" name="textfield" 
+    value="&lt;Enter data here&gt;" />
+</form>

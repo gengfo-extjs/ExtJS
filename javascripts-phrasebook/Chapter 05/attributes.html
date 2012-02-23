@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+var nr = 1;
+function addItem() {
+  var list = document.getElementById("list");
+  var newNode = document.createElement("li");
+  var newLink = document.createElement("a");
+  newLink.setAttribute("href", "http://www.samspublishing.com/");
+  nr++;
+  var newTextNode = document.createTextNode("Item " + nr);
+  newLink.appendChild(newTextNode);
+  newNode.appendChild(newLink);
+  list.appendChild(newNode);
+}
+</script>
+<ul id="list"><li>Item 1</li></ul>
+<input type="button" onclick="addItem();" value="Add item" />

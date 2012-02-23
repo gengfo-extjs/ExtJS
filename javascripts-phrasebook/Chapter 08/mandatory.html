@@ -1,0 +1,12 @@
+<script language="JavaScript" type="text/javascript">
+function validate(field) {
+  if (field.value.replace(/\s/g, "") == "") {
+    window.alert("Invalid data!");
+    field.focus();
+  }
+}
+</script>
+<form onsubmit="return checkform(this);">
+  Any data <input type="text" name="code" 
+                onblur="validate(this);" />
+</form>

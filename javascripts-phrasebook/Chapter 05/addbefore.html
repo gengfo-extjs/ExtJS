@@ -1,0 +1,9 @@
+<script language="JavaScript" type="text/javascript">
+function addItem() {
+  var list = document.getElementById("list");
+  var newNode = document.createElement("li");
+  list.insertBefore(newNode, list.firstChild);
+}
+</script>
+<ul id="list"><li>Item</li></ul>
+<input type="button" onclick="addItem();" value="Add item" />

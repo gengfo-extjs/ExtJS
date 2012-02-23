@@ -1,0 +1,14 @@
+<script language="JavaScript" type="text/javascript">
+window.onload = function() {
+  var width, height;
+  if (window.innerWidth) {
+    width = window.outerWidth;
+    height = window.outerHeight;
+  } else {
+    width = document.body.clientWidth;
+    height = document.body.clientHeight;
+  }
+  window.resizeBy(-Math.round(width / 2), -Math.round(height / 2));
+}
+</script>
+<body></body>

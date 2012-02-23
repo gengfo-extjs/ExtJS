@@ -1,0 +1,18 @@
+<script language="JavaScript" type="text/javascript">
+/*
+function changeFrames(frame1, url1, frame2, url2) {
+  top.frames[frame1].location.href = url1;
+  top.frames[frame2].location.href = url2;
+}
+*/
+function changeFrames() {
+  for (var i=0; i < Math.ceil(changeFrames.arguments.length / 2); i++) {
+    top.frames[changeFrames.arguments[2 * i]].location.href = 
+      changeFrames.arguments[2 * i + 1];
+  }
+}
+</script>
+<frameset cols="150,*">
+  <frame src="frame1a.html" name="navigation" />
+  <frame src="frame2a.html" name="content" />
+</frameset>

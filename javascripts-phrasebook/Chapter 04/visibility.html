@@ -1,0 +1,17 @@
+<script language="JavaScript" type="text/javascript">
+  function showHide(show, hide) {
+    document.getElementById(show).style.visibility = "visible";
+    document.getElementById(hide).style.visibility = "hidden";
+  }
+</script>
+<p>&nbsp;<br />&nbsp;</p>
+<p id="tab1" style="position: absolute; top: 5px; left: 5px;">
+  Tab 1
+</p>
+<p id="tab2" style="position: absolute; top: 5px; left: 5px; visibility: hidden;">
+  Tab 2
+</p>
+<input type="button" value="Tab 1" 
+  onclick="showHide('tab1', 'tab2');" />
+<input type="button" value="Tab 2" 
+  onclick="showHide('tab2', 'tab1');" />

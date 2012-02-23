@@ -1,0 +1,15 @@
+<script language="JavaScript" type="text/javascript">
+var submitted = false;
+function checkform(f) {
+  if (submitted) {
+    window.alert("Form has already been submitted!");
+    return false;
+  } else {
+    submitted = true;
+    return true;
+  }
+}
+</script>
+<form action="delay.php" onsubmit="return checkform(this);">
+  <input type="submit" value="Submit data" />
+</form>

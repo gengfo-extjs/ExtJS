@@ -1,0 +1,23 @@
+<script language="JavaScript" type="text/javascript">
+function showStatus(f) {
+  var index = f.elements["selectionlist"].selectedIndex;
+  if (index == -1) {
+    window.alert("No element selected");
+  } else {
+    var element = f.elements["selectionlist"].options[index];
+    window.alert("Element #" + index + 
+      " (caption: " + element.text + 
+      ", value: " + element.value + 
+      ") selected");
+  }
+}
+</script>
+<form>
+  <select name="selectionlist" size="3">
+    <option value="R">red</option>
+    <option value="G">green</option>
+    <option value="B">blue</option>
+  </select>
+  <input type="button" value="Show status" 
+    onclick="showStatus(this.form);" />
+</form>

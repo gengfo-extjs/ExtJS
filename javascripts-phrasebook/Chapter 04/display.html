@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+  function showHide(show, hide) {
+    document.getElementById(show).style.display = "block";
+    document.getElementById(hide).style.display = "none";
+  }
+</script>
+<p id="tab1">
+  Tab 1
+</p>
+<p id="tab2" style="display: none;">
+  Tab 2
+</p>
+<input type="button" value="Tab 1" 
+  onclick="showHide('tab1', 'tab2');" />
+<input type="button" value="Tab 2" 
+  onclick="showHide('tab2', 'tab1');" />

@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>JavaScript</title>
+  <script language="Javascript" type="text/javascript">
+  function callWebService(f) {
+    var soapcall = new SOAPCall();
+    soapcall.actionURI = "http://javascript.phrasebook.org/randomNumber";
+    soapcall.transportURI = "http://localhost/js/webservice.php";
+
+    var parameters = [
+      new SOAPParameter(parseInt(f.elements["lower"].value), "lower"),
+      new SOAPParameter(parseInt(f.elements["upper"].value), "upper")
+    ];
+    soapcall.encode(
+      0,
+      "randomNumber",
+      "http://javascript.phrasebook.org/",
+      0, 
+      [], 
+      parameters.length, 
+      parameters
+    );
+    soapcall.asyncInvoke(callbackFunction);
+  }
+  
+  function callbackFunction(result) {
+    document.getElementById("random").innerHTML = 
+      result.body.firstChild.firstChild.firstChild.data;
+  }
+  </script>
+</head>
+<body>
+  <form>
+    A number between 
+    <input type="text" name="lower" size="3" value="1" /> and
+    <input type="text" name="upper" size="3" value="49" /> is
+    <span id="random" /><br />
+    <input type="button" value="Retrieve" onclick="callWebService(this.form);" />
+  </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+function showPosition(e) {
+  var x, y;
+  if (window.event) {
+    x = window.event.clientX;
+    y = window.event.clientY;
+  } else {
+    x = e.pageX; 
+    y = e.pageY; 
+  }
+  window.status = "x: " + x + ", y: " + y;
+}
+window.onload = function() {
+  document.onmousemove = showPosition;
+}
+</script>

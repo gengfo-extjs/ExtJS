@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>JavaScript</title>
+  <script language="Javascript" type="text/javascript">
+  function callWebService(f) {
+    WebService.useService("webservice.asmx?WSDL", "RandomNumberService");
+    WebService.RandomNumberService.callService(
+      callbackFunction,
+      "randomNumber",
+      parseInt(f.elements["lower"].value), 
+      parseInt(f.elements["upper"].value));
+  }
+  
+  function callbackFunction(result) {
+    document.getElementById("random").innerHTML = result.value;
+  }
+  </script>
+</head>
+<body>
+  <div id="WebService" style="behavior:url(webservice.htc);">
+  </div>
+  <form>
+    A number between 
+    <input type="text" name="lower" size="3" value="1" /> and
+    <input type="text" name="upper" size="3" value="49" /> is
+    <span id="random" /><br />
+    <input type="button" value="Retrieve" onclick="callWebService(this.form);" />
+  </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+var hasFlash = false;
+if (window.ActiveXObject) {
+  try {
+    if (new ActiveXObject("ShockwaveFlash.ShockwaveFlash.8")) {
+      hasFlash = true;
+    }
+  } catch (e) {
+  }
+} else if (navigator.plugins) {
+  if (navigator.plugins["Shockwave Flash"]) {
+      hasFlash = true;
+  }
+}
+window.alert(hasFlash);
+</script>

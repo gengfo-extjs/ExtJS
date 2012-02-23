@@ -1,0 +1,21 @@
+<script language="JavaScript" type="text/javascript">
+function UniversalCounter() {
+  this.copyright = "(C) 2006 JavaScript Phrasebook";
+  this.Count = count;
+  var numbers = {
+    "en": "one, two, three",
+    "fr": "un, deux, trois",
+    "de": "eins, zwei, drei"
+  };
+  function count(language) {
+    if (numbers[language]) {
+      window.alert(numbers[language]);
+    } else {
+      window.alert("Unknown language");
+    }
+  }
+}
+
+var uc = new UniversalCounter();
+uc.Count("fr");
+</script>

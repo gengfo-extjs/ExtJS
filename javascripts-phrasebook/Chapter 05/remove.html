@@ -1,0 +1,10 @@
+<script language="JavaScript" type="text/javascript">
+function removeItem() {
+  var list = document.getElementById("list");
+  if (list.childNodes.length > 0) {
+    list.removeChild(list.lastChild);
+  }
+}
+</script>
+<ol id="list"><li>Item</li><li>Item</li><li>Item</li><li>Item</li></ol>
+<input type="button" onclick="removeItem();" value="Remove item" />

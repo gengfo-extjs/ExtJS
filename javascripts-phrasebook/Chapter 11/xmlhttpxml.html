@@ -1,0 +1,24 @@
+<script language="JavaScript" type="text/javascript" src="xmlhttp.js"></script>
+<script language="JavaScript" type="text/javascript">
+var XMLHttp = getXMLHttp();
+XMLHttp.open("GET", "phrasebook.xml");
+XMLHttp.onreadystatechange = handlerFunction;
+XMLHttp.send(null);
+
+function handlerFunction() {
+  if (XMLHttp.readyState == 4) {
+    var xml = XMLHttp.responseXML;
+    var book = xml.getElementsByTagName("book")[0];
+    var pubdate = book.getAttribute("pubdate");
+    var title, publisher;
+    for (var i=0; i<book.childNodes.length; i++) {
+      if (book.childNodes[i].nodeName == "title") {
+        title = book.childNodes[i].firstChild.nodeValue;
+      } else if (book.childNodes[i].nodeName == "publisher") {
+        publisher = book.childNodes[i].firstChild.nodeValue;
+      }
+    }
+    window.alert(title + " by " + publisher + " (" + pubdate + ")");
+  }
+}
+</script>

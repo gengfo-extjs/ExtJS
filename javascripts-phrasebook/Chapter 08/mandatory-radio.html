@@ -1,0 +1,20 @@
+<script language="JavaScript" type="text/javascript">
+function checkform(f) {
+  for (var i=0; i<f.elements["colors"].length; i++) {
+    var radio = f.elements["colors"][i];
+    if (radio.checked) {
+      return true;
+    }
+  }
+  // no checked radio button found
+  window.alert("No color selected!");
+  f.elements["colors"][0].focus();
+  return false;
+}
+</script>
+<form onsubmit="return checkform(this);">
+  <input type="radio" name="colors" value="R" />red<br />
+  <input type="radio" name="colors" value="G" />green<br />
+  <input type="radio" name="colors" value="B" />blue<br />
+  <input type="submit" value="Submit data" />
+</form>

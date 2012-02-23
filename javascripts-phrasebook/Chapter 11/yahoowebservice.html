@@ -1,0 +1,19 @@
+<script language="JavaScript" type="text/javascript">
+function showResults(data) {
+  var ul = document.getElementById("output");
+  for (var i=0; i < data.ResultSet.Result.length; i++) {
+    var text = document.createTextNode(
+      data.ResultSet.Result[i].Title + " - " + 
+      data.ResultSet.Result[i].Url);
+    var li = document.createElement("li");
+    li.appendChild(text);
+    ul.appendChild(li);
+  }
+}
+</script>
+<body>
+  <p><ul id="output"></ul></p>
+</body>
+<script language="JavaScript" type="text/javascript"
+  src="http://api.search.yahoo.com/WebSearchService/V1/webSearch?appid=XXXXX&query=JavaScript&output=json&callback=showResults">
+</script>

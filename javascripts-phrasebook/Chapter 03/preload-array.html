@@ -1,0 +1,25 @@
+<script language="JavaScript" type="text/javascript">
+function changeImage(name, url) {
+  if (document.images[name]) {
+    document.images[name].src = url;
+  }
+}
+
+function preloadImages(urls) {
+  var img = new Array();
+  for (var i=0; i<urls.length; i++) {
+    img[img.length] = new Image();
+    img[img.length - 1].src = urls[i];
+  }
+}
+
+window.onload = function() {
+  var img = new Array("active.gif", "inactive.gif", "other.gif");
+  preloadImages(img);
+}
+</script>
+<img 
+  name="myImage"
+  src="inactive.gif"
+  onmouseover="changeImage('myImage', 'active.gif');"
+  onmouseout="changeImage('myImage', 'inactive.gif');" />

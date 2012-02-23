@@ -1,0 +1,24 @@
+<script language="JavaScript" type="text/javascript">
+function showStatus(f) {
+  var s = "";
+  var list = f.elements["selectionlist"];
+  for (var i=0; i<list.options.length; i++) {
+    var option = list.options[i];
+    s += "Element #" + i 
+      + " (" + option.text 
+      + "/" + option.value 
+      + ") " + (option.selected ? "selected." : "not selected.")
+      + "\n";
+  }
+  window.alert(s);
+}
+</script>
+<form>
+  <select name="selectionlist" size="3" multiple="multiple">
+    <option value="R">red</option>
+    <option value="G">green</option>
+    <option value="B">blue</option>
+  </select>
+  <input type="button" value="Show status" 
+    onclick="showStatus(this.form);" />
+</form>

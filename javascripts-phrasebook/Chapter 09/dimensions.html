@@ -1,0 +1,13 @@
+<script language="JavaScript" type="text/javascript">
+window.onload = function() {
+  if (window.innerWidth) {
+    window.alert("inner: " + window.innerWidth + " x " + window.innerHeight + 
+      " pixels\nouter: " + window.outerWidth + " x " + window.outerHeight + " pixels");
+  } else {
+    with (document.body) {
+      window.alert(clientWidth + " x " + clientHeight + " pixels");
+    }
+  }
+}
+</script>
+<body></body>

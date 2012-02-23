@@ -1,0 +1,11 @@
+<script language="JavaScript" type="text/javascript">
+var nr = 1;
+function addItem() {
+  var list = document.getElementById("list");
+  nr++;
+  var newNode = "<li>Item " + nr + "</li>";
+  list.innerHTML += newNode;
+}
+</script>
+<ul id="list"><li>Item 1</li></ul>
+<input type="button" onclick="addItem();" value="Add item" />

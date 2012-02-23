@@ -1,0 +1,77 @@
+<script language="JavaScript" type="text/javascript">
+function positionBanner() {
+  var nav = document.getElementById("banner");
+  var x, y;
+  var navwidth = 400;
+  if (window.innerWidth) {
+    x = window.pageXOffset + Math.round((window.innerWidth - navwidth) / 2);
+    y = window.pageYOffset + 10;
+  } else {
+    with (document.body) {
+      x = scrollLeft + Math.round((clientWidth - navwidth) / 2);
+      y = scrollTop + 10;
+    }
+  }
+  nav.style.left = x + "px";
+  nav.style.posLeft = x;
+  nav.style.top = y + "px";
+  nav.style.posTop = y;
+}
+window.onload = positionBanner;
+window.onscroll = positionBanner;
+</script>
+<h1>My Portal</h1>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<div id="banner" style="position: absolute;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" 
+  codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" 
+  width="400" height="550" id="flashad">
+  <param name="movie" value="flashad.swf" />
+  <param name="quality" value="high" />
+  <param name="wmode" value="transparent" />
+  <param name="bgcolor" value="#ffffff" />
+  <embed src="flashad.swf" quality="high" wmode="transparent" 
+      bgcolor="#ffffff" width="400" height="550" name="flashad" 
+      type="application/x-shockwave-flash" 
+      pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+</div>

@@ -1,0 +1,20 @@
+<script language="JavaScript" type="text/javascript">
+var newwin = window.open("", "samsWindow", "");
+newwin.document.write("<body></body>");
+
+var windowwidth, windowheight;
+if (window.innerWidth) {
+  windowwidth = newwin.outerWidth;
+  windowheight = newwin.outerHeight;
+} else {
+  windowwidth = newwin.document.body.clientWidth;
+  windowheight = newwin.document.body.clientHeight;
+}
+var screenwidth = screen.availWidth;
+var screenheight = screen.availHeight;
+newwin.moveTo(
+  Math.round((screenwidth - windowwidth) / 2),
+  Math.round((screenheight - windowheight) / 2));
+newwin.location.href = "http://www.samspublishing.com/";
+</script>
+<body></body>

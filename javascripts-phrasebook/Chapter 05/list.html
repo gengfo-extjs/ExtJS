@@ -1,0 +1,17 @@
+<script language="JavaScript" type="text/javascript">
+function createList(data) {
+  var list = document.createElement("ul");
+  for (var i = 0; i < data.length; i++) {
+    var newItem = document.createElement("li");
+    var newText = document.createTextNode(data[i]);
+    newItem.appendChild(newText);
+    list.appendChild(newItem);
+  }
+  return list;
+}
+
+window.onload = function() {
+  var list = createList(["one", "two", "three", "four", "five"]);
+  document.body.appendChild(list);
+}
+</script>

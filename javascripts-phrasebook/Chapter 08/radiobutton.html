@@ -1,0 +1,17 @@
+<script language="JavaScript" type="text/javascript">
+function showStatus(f) {
+  var s = "";
+  for (var i=0; i<f.elements["radiobutton"].length; i++) {
+    var btn = f.elements["radiobutton"][i];
+    s += btn.value + ": " + btn.checked + "\n";
+  }
+  window.alert(s);
+}
+</script>
+<form>
+  <input type="radio" name="radiobutton" value="R" />red
+  <input type="radio" name="radiobutton" value="G" />green
+  <input type="radio" name="radiobutton" value="B" />blue
+  <input type="button" value="Show status" 
+    onclick="showStatus(this.form);" />
+</form>

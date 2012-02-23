@@ -1,0 +1,31 @@
+<script language="JavaScript" type="text/javascript">
+function serialize(data) {
+  var namevalue = "";
+  for (var el in data) {
+    namevalue += "&" + escape(el) + "=" + escape(data[el]);
+  }
+  return namevalue.substring(1);
+}
+function unserialize(data) {
+  var object = new Array();
+  var pairs = data.split(/&/g);
+  for (var i=0; i<pairs.length; i++) {
+    if (pairs[i].indexOf("=") > -1) {
+      object[unescape(pairs[i].substring(0, pairs[i].indexOf("=")))] = 
+        unescape(pairs[i].substring(pairs[i].indexOf("=") + 1));
+    }
+  }
+  return object;
+}
+
+var myData = {"myLanguage": "JavaScript", 
+              "myOtherLanguage": "PHP: Hypertext Preprocessor"};
+var mySerData = serialize(myData);
+window.alert("Serialized: " + mySerData);
+var myUnserData = unserialize(mySerData);
+var s = "Unserialized:\n\n" ;
+for (var el in myUnserData) {
+  s += el + ": " + myUnserData[el] + "\n";
+}
+window.alert(s);
+</script>

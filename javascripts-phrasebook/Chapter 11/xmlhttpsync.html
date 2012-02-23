@@ -1,0 +1,11 @@
+<script language="JavaScript" type="text/javascript" src="xmlhttp.js"></script>
+<script language="JavaScript" type="text/javascript">
+window.onload = function() {
+  var XMLHttp = getXMLHttp();
+  XMLHttp.open("GET", "phrasebook.txt", false);
+  XMLHttp.send(null);
+  document.getElementById("output").innerHTML = 
+    "Returned data: " + XMLHttp.responseText;
+}
+</script>
+<p id="output">Calling the server ...</p>

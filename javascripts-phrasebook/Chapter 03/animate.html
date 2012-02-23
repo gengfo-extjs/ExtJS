@@ -1,0 +1,15 @@
+<script language="JavaScript" type="text/javascript">
+var urls;
+
+function animate(pos) {
+  pos %= urls.length;
+  document.images["animation"].src = urls[pos];
+  window.setTimeout("animate(" + (pos + 1) + ");", 500);
+}
+
+window.onload = function() {
+  urls = new Array("0.png", "1.png", "2.png", "3.png", "4.png", "5.png", "6.png");
+  animate(0);
+}
+</script>
+<img src="0.png" name="animation" />

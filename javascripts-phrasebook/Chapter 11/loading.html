@@ -1,0 +1,27 @@
+<script language="JavaScript" type="text/javascript" src="xmlhttp.js"></script>
+<script language="JavaScript" type="text/javascript">
+var XMLHttp = getXMLHttp();
+window.onload = function() {
+  XMLHttp.open("GET", "delay.php?" + Math.random());
+  XMLHttp.onreadystatechange = handlerFunction;
+  XMLHttp.send(null);
+  with (document.getElementById("loading")) {
+    style.visibility = "visible";
+    if (navigator.appName == "Microsoft Internet Explorer") {
+      style.posLeft = document.body.clientWidth - 75;
+      style.posTop = 0;
+    } else {
+      style.left = (window.innerWidth - 75) + "px";
+      style.top = "0px";
+    }
+  }
+}
+
+function handlerFunction() {
+  if (XMLHttp.readyState == 4) {
+    document.getElementById("loading").style.visibility = "hidden";
+    window.alert("Returned data: " + XMLHttp.responseText);
+  }
+}
+</script>
+<span id="loading" style="position: absolute; visibility: hidden; background-color: red; width: 75px;">Loading ...</span>

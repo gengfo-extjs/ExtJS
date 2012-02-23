@@ -1,0 +1,48 @@
+<script language="JavaScript" type="text/javascript">
+function positionNavigation() {
+  var nav = document.getElementById("navigation");
+  var x, y;
+  var navwidth = 155;
+  if (window.innerWidth) {
+    x = window.innerWidth + window.pageXOffset - navwidth;
+    y = window.pageYOffset + 10;
+  } else {
+    with (document.body) {
+      x = clientWidth + scrollLeft - navwidth;
+      y = scrollTop + 10;
+    }
+  }
+  nav.style.left = x + "px";
+  nav.style.posLeft = x;
+  nav.style.top = y + "px";
+  nav.style.posTop = y;
+}
+window.onload = positionNavigation;
+window.onscroll = positionNavigation;
+</script>
+<h1>My Portal</h1>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<p>Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. 
+  Some sample text. Some sample text. Some sample text. </p>
+<div id="navigation" style="position: absolute; background-color: #eee; border: 1px solid">
+<a href="http://www.samspublishing.com/">Sams Publishing</a><br />
+<a href="http://www.amazon.com/gp/product/0672328801">This book at Amazon</a><br />
+<a href="http://www.hauser-wenz.de/blog/">Author's weblog</a>
+</div>

@@ -1,0 +1,14 @@
+<books>
+  <book pubdate="2006">
+    <title>JavaScript Phrasebook</title>
+    <publisher>Sams Publishing</publisher>
+  </book>
+  <book pubdate="2006">
+    <title>MySQL Phrasebook</title>
+    <publisher>Sams Publishing</publisher>
+  </book>
+  <book pubdate="2005">
+    <title>PHP Phrasebook</title>
+    <publisher>Sams Publishing</publisher>
+  </book>
+</books>

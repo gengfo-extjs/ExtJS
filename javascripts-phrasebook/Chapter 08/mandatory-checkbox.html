@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+function checkform(f) {
+  if (!f.elements["terms"].checked) {
+    window.alert("Terms &amp; conditions must be accepted!");
+    f.elements["terms"].focus();
+    return false;
+  } else {
+    return true;
+  }
+}
+</script>
+<form onsubmit="return checkform(this);">
+  Accept terms &amp; conditions
+    <input type="checkbox" name="terms" /><br />
+    <input type="submit" value="Submit data" />
+</form>

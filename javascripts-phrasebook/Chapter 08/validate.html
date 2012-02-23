@@ -1,0 +1,76 @@
+<script language="JavaScript" type="text/javascript">
+function checkform(f) {
+  var errortext = "";
+  var checkedgroups = "";
+  for (var i=0; i<f.elements.length; i++) {
+    var element = f.elements[i];
+    switch (element.type) {
+      case "text": 
+      case "textarea":
+      case "password":
+        if (element.value.replace(/\s/g, "") == "") {
+          errortext += element.name + "\n";
+        }
+        break;
+      case "checkbox":
+        if (!element.checked) {
+          errortext += element.name + "\n";
+        }
+        break;
+      case "radio":
+        var group = f.elements[element.name];
+        if (checkedgroups.indexOf("[" + element.name + "]") > -1) {
+          continue;
+        } else {
+          checkedgroups += "[" + element.name + "]";
+        }
+        var groupok = false;
+        for (var j=0; j<group.length; j++) {
+          if (group[j].checked) {
+            groupok = true;
+          }
+        }
+        if (!groupok) {
+          errortext += element.name + "\n";
+        }
+        break;
+      case "select-one":
+      case "select-multiple":
+        var selectok = false;
+        for (var j=0; j<element.options.length; j++) {
+          var item = element.options[j];
+          if (item.selected && item.value != "") {
+            selectok = true;
+          }
+        }
+        if (!selectok) {
+          errortext += element.name + "\n";
+        }
+        break;
+    }
+  }
+  if (errortext == "") {
+    return true;
+  } else {
+    window.alert(
+      "The following fields have not been correctly filled out:\n\n"
+      + errortext);
+    return false;
+  }
+}
+</script>
+<form onsubmit="return checkform(this);">
+  Your name <input type="text" name="name" /><br />
+  Accept terms &amp; conditions
+    <input type="checkbox" name="terms" /><br />
+  <input type="radio" name="colorradio" value="R" />red
+  <input type="radio" name="colorradio" value="G" />green
+  <input type="radio" name="colorradio" value="B" />blue<br />
+  <select name="colorlist">
+    <option value="">Select a color</option>
+    <option value="R">red</option>
+    <option value="G">green</option>
+    <option value="B">blue</option>
+  </select><br />
+  <input type="submit" value="Submit data" />
+</form>

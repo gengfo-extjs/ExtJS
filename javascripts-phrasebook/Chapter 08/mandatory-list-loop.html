@@ -1,0 +1,27 @@
+<script language="JavaScript" type="text/javascript">
+function checkform(f) {
+  for (var i=0; i<f.elements["colors"].options.length; i++) {
+    var element = f.elements["colors"].options[i];
+    if (element.selected && element.value != "") {
+      return true;
+    }
+  }
+  window.alert("No color selected!");
+  f.elements["colors"].focus();
+  return false;
+}
+</script>
+<form onsubmit="return checkform(this);">
+  <select name="colors" size="9" multiple="multiple">
+    <option value="">Select a color</option>
+    <option value="R">red</option>
+    <option value="G">green</option>
+    <option value="B">blue</option>
+    <option value="">-------</option>
+    <option value="C">cyan</option>
+    <option value="M">magenta</option>
+    <option value="Y">yellow</option>
+    <option value="K">black</option>
+  </select>
+  <input type="submit" value="Submit data" />
+</form>

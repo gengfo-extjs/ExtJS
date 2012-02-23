@@ -1,0 +1,14 @@
+<script language="JavaScript" type="text/javascript">
+function validate(field) {
+  var regex = /^\d{5}$/;
+  if (!regex.test(field.value)) {
+    window.alert("Invalid postal code!");
+    field.value = "";
+    field.focus();
+  }
+}
+</script>
+<form onsubmit="return checkform(this);">
+  US postal code <input type="text" name="code" 
+                  onblur="validate(this);" />
+</form>

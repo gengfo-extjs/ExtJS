@@ -1,0 +1,45 @@
+<script language="JavaScript" type="text/javascript">
+function loadURL(list) {
+  var url = list.options[list.selectedIndex].value;
+  if (url != "") {
+    location.href = url;
+  }
+}
+
+var data = {
+  "search" : [
+    {"title": "Google", "url": "http://www.google.com/"},
+    {"title": "MSN", "url": "http://search.msn.com/"}
+  ],
+  "browsers" : [
+    {"title": "Firefox", "url": "http://www.mozilla.com/firefox/"},
+    {"title": "Opera", "url": "http://www.opera.com/"}
+  ]
+};
+
+function loadElements(f) {
+  with (f) {
+    var category = elements["categories"].options[
+      elements["categories"].selectedIndex].value;
+    if (category != "") {
+      var links = data[category];
+      elements["urls"].options.length = 0;
+      elements["urls"].options[0] = 
+        new Option("Please select...", "#");
+      for (var i=0; i<links.length; i++) {
+        elements["urls"].options[elements["urls"].options.length] = 
+          new Option(links[i].title, links[i].url);
+      }
+    }
+  }
+}
+</script>
+<form>
+  <select name="categories" onchange="loadElements(this.form);">
+    <option value="">Please select...</option>
+    <option value="search">Search Engines</option>
+    <option value="browsers">Browsers</option>
+  </select>
+  <select name="urls" onchange="loadURL(this);">
+  </select>
+</form>

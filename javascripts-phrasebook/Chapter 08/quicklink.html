@@ -1,0 +1,16 @@
+<script language="JavaScript" type="text/javascript">
+function loadURL(list) {
+  var url = list.options[list.selectedIndex].value;
+  if (url != "") {
+    location.href = url;
+  }
+}
+</script>
+<form>
+  <select name="urls" onchange="loadURL(this);">
+    <option value="">Please select...</option>
+    <option value="http://www.samspublishing.com/">SAMS</option>
+    <option value="http://www.hauser-wenz.de/blog/">H&amp;W blog</option>
+    <option value="http://www.damonjordan.com/">Damon</option>
+  </select>
+</form>

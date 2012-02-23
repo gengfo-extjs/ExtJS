@@ -1,0 +1,43 @@
+<script language="JavaScript" type="text/javascript" src="xmlhttp.js"></script>
+<script src="ajaxslt-0.4/misc.js" type="text/javascript"></script>
+<script src="ajaxslt-0.4/dom.js" type="text/javascript"></script>
+<script src="ajaxslt-0.4/xpath.js" type="text/javascript"></script>
+<script src="ajaxslt-0.4/xslt.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+var xml = null;
+var xslt = null;
+var XMLHttp1 = getXMLHttp();
+var XMLHttp2 = getXMLHttp();
+window.onload = function() {
+  XMLHttp1.open("GET", "phrasebooks.xml");
+  XMLHttp1.onreadystatechange = handlerFunction1;
+  XMLHttp1.send(null);
+  XMLHttp2.open("GET", "phrasebooks.xsl");
+  XMLHttp2.onreadystatechange = handlerFunction2;
+  XMLHttp2.send(null);
+}
+
+function handlerFunction1() {
+  if (XMLHttp1.readyState == 4) {
+    xml = xmlParse(XMLHttp1.responseText);
+    if (xslt != null) {
+      transform();
+    }
+  }
+}
+
+function handlerFunction2() {
+  if (XMLHttp2.readyState == 4) {
+    xslt = xmlParse(XMLHttp2.responseText);
+    if (xml != null) {
+      transform();
+    }
+  }
+}
+
+function transform() {
+  var result = xsltProcess(xml, xslt);
+  document.getElementById("output").innerHTML = result;
+}
+</script>
+<div id="output"></div>

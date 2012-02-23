@@ -1,0 +1,18 @@
+<script language="JavaScript" type="text/javascript">
+function enable(f) {
+  f.elements["password"].readOnly = false;
+}
+
+function disable(f) {
+  f.elements["password"].readOnly = true;
+}
+</script>
+<form>
+  <input type="radio" name="radiobutton" value="login" 
+    checked="checked"
+    onclick="enable(this.form);" />Login
+  <input type="radio" name="radiobutton" value="register" 
+    onclick="disable(this.form);" />Register<br />
+  Username <input type="text" name="username" /><br />
+  Password <input type="password" name="password" /><br />
+</form>
